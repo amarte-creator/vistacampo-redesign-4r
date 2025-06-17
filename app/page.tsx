@@ -124,7 +124,7 @@ export default function HomePage() {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src="/images/vistacampo-vista-aerea.jpg"
                   alt="Instalaciones de Vistacampo - Centro de rehabilitación en ambiente natural"
                   width={600}
                   height={500}
@@ -168,7 +168,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <Image
-                    src="/images/logo-vistacampo.png"
+                    src="/images/julio_gonzalez.jpg"
                     alt="Julio González - Fundador de Vistacampo Centro Terapéutico"
                     width={600}
                     height={700}
