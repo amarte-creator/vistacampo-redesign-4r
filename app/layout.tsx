@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Vistacampo - Centro de Rehabilitación de Adicciones en Caracas",
+  icons: {
+    icon: "/vistacampo-favicon.png",
+  },
   description:
     "Centro especializado en tratamiento de adicciones en Caracas, Venezuela. Ofrecemos desintoxicación médica, terapia individual y grupal en un ambiente seguro y confidencial.",
   keywords:

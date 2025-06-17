@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Lock, Eye, Phone, Mail } from "lucide-react"
+import { Shield, Lock, Eye, Mail } from "lucide-react"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -263,10 +265,10 @@ export default function PrivacidadPage() {
               <div className="bg-emerald-50 p-6 rounded-lg mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Oficial de Privacidad de Vistacampo</h3>
                 <div className="grid md:grid-cols-2 gap-4 text-gray-700">
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-emerald-600" />
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <WhatsAppIcon className="h-4 w-4 text-emerald-600" />
                     <span>(+58) 412-231-5968</span>
-                  </div>
+                  </a>
                   <div className="flex items-center gap-2">
                     <Mail className="h-4 w-4 text-emerald-600" />
                     <span>privacidad@vistacampo.com</span>

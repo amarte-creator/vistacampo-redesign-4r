@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckCircle, Clock, Users, Heart, Shield, Phone, ArrowRight } from "lucide-react"
+import { CheckCircle, Clock, Users, Heart, Shield, MessageCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "Tratamiento de Adicciones - Programas Terapéuticos | Vistacampo",
@@ -29,10 +31,12 @@ export default function TratamientoPage() {
               Nuestro enfoque médico y psicológico especializado te acompañará en cada etapa de tu proceso de
               recuperación, desde la desintoxicación hasta el seguimiento a largo plazo.
             </p>
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-              <Phone className="mr-2 h-5 w-5" />
-              Consulta Gratuita
-            </Button>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                <WhatsAppIcon className="mr-2 h-5 w-5" />
+                Consulta Gratuita
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -87,6 +91,298 @@ export default function TratamientoPage() {
                   height={500}
                   className="rounded-2xl shadow-2xl"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Objetivos del Tratamiento */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
+                Nuestros Objetivos
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Objetivos del Tratamiento</h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Nuestro programa terapéutico está diseñado para lograr una recuperación integral y sostenible, 
+                abordando todos los aspectos de la adicción y sus consecuencias.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <div className="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-emerald-600 font-bold text-xl">1</span>
+                  </div>
+                  <CardTitle className="text-xl">Diagnóstico Integral</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 leading-relaxed">
+                    Identificar y diagnosticar correctamente el grado de dependencia del paciente a las drogas, 
+                    incluidos los fármacos, sus posibles complicaciones, alteraciones orgánicas y psicológicas.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-blue-600 font-bold text-xl">2</span>
+                  </div>
+                  <CardTitle className="text-xl">Estrategias Terapéuticas</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 leading-relaxed">
+                    Desarrollar estrategias terapéuticas efectivas para acompañar al paciente durante el tratamiento, 
+                    transmitiendo conciencia de su enfermedad, alejándose del consumo y enseñándole a vivir con dignidad.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-purple-600 font-bold text-xl">3</span>
+                  </div>
+                  <CardTitle className="text-xl">Reinserción Integral</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 leading-relaxed">
+                    Conseguir la gradual reinserción familiar, social y profesional del paciente hasta alcanzar 
+                    la normalidad en todos los aspectos que circundan su vida, de manera plena y satisfactoria.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <div className="bg-teal-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-teal-600 font-bold text-xl">4</span>
+                  </div>
+                  <CardTitle className="text-xl">Apoyo Familiar</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 leading-relaxed">
+                    Lograr que los familiares y las parejas conozcan y comprendan la adicción, involucrándose 
+                    activamente en el proceso de recuperación y ayudándoles a tratar su propia coadicción.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fases Detalladas del Tratamiento */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
+                Proceso Estructurado
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fases del Tratamiento</h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                La duración del ingreso dependerá de la evolución y adaptación del paciente. A título orientativo, 
+                la mayoría de los pacientes completan un programa de 16 a 20 semanas, cumpliendo las 4 fases fundamentales.
+              </p>
+            </div>
+
+            <div className="space-y-12">
+              {/* Fase 1: Desintoxicación */}
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-emerald-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
+                      1
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">Desintoxicación</h3>
+                      <p className="text-emerald-600 font-medium">Primeros 15-20 días</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4 text-gray-700">
+                    <p className="leading-relaxed">
+                      Comienza a partir del día del ingreso hasta los primeros quince a veinte días. En este período 
+                      se realiza una intervención centrada en la desintoxicación física en estricta observación del equipo médico.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                        <span>Soporte farmacológico según necesidad médica</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                        <span>Diagnósticos para detectar trastornos paralelos</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                        <span>Descanso, alimentación equilibrada y reconciliación del sueño</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                        <span>Rutina inicial de ejercicios y terapias individuales y grupales</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative">
+                  <Image
+                    src="/placeholder.svg?height=400&width=500"
+                    alt="Proceso de desintoxicación médica supervisada"
+                    width={500}
+                    height={400}
+                    className="rounded-2xl shadow-2xl"
+                  />
+                </div>
+              </div>
+
+              {/* Fase 2: Deshabituación */}
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="relative lg:order-2">
+                  <Image
+                    src="/placeholder.svg?height=400&width=500"
+                    alt="Proceso de deshabituación y cambio de hábitos"
+                    width={500}
+                    height={400}
+                    className="rounded-2xl shadow-2xl"
+                  />
+                </div>
+                <div className="space-y-6 lg:order-1">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">Deshabituación</h3>
+                      <p className="text-blue-600 font-medium">Cambio de hábitos y conductas</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4 text-gray-700">
+                    <p className="leading-relaxed">
+                      Los años de consumo y la adicción alteran la vida normal de las personas, interrumpen su proceso 
+                      de crecimiento y madurez, llevando al adicto a hábitos, conductas, patrones y creencias equivocadas.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <span>Identificación de hábitos y actitudes negativas</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <span>Sustitución por nueva estructura de vida</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <span>Mejora de relaciones consigo mismo y familia</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                        <span>Desarrollo del proyecto de vida personal</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Fase 3: Rehabilitación */}
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">Rehabilitación</h3>
+                      <p className="text-purple-600 font-medium">Crecimiento personal y desarrollo de habilidades</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4 text-gray-700">
+                    <p className="leading-relaxed">
+                      Consiste en continuar el proceso de crecimiento personal y desarrollar las habilidades que el 
+                      paciente interrumpió debido al consumo de drogas.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                        <span>Terapias de grupo e individuales intensivas</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                        <span>Arte terapia, yoga y ejercicios físicos</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                        <span>Técnicas de relajación y control de impulsos</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                        <span>Recuperación de autoestima y dignidad personal</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative">
+                  <Image
+                    src="/placeholder.svg?height=400&width=500"
+                    alt="Proceso de rehabilitación y crecimiento personal"
+                    width={500}
+                    height={400}
+                    className="rounded-2xl shadow-2xl"
+                  />
+                </div>
+              </div>
+
+              {/* Fase 4: Reinserción */}
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="relative lg:order-2">
+                  <Image
+                    src="/placeholder.svg?height=400&width=500"
+                    alt="Proceso de reinserción social y familiar"
+                    width={500}
+                    height={400}
+                    className="rounded-2xl shadow-2xl"
+                  />
+                </div>
+                <div className="space-y-6 lg:order-1">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-teal-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl">
+                      4
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">Reinserción</h3>
+                      <p className="text-teal-600 font-medium">Preparación para la vida normal</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4 text-gray-700">
+                    <p className="leading-relaxed">
+                      Durante el ingreso y principalmente en las últimas semanas del tratamiento, al paciente se le 
+                      prepara para su reinserción en el entorno familiar, social y laboral.
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <span>Preparación gradual para la vida normal</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <span>Alcanzar el nivel de calidad de vida perdido</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <span>Asesoría y orientación post-alta por 2-5 años</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <span>Reducción de riesgos de recaída</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -280,8 +576,8 @@ export default function TratamientoPage() {
               <AccordionItem value="item-6" className="border rounded-lg px-6">
                 <AccordionTrigger className="text-left font-semibold">¿Aceptan seguros médicos?</AccordionTrigger>
                 <AccordionContent className="text-gray-600 pt-4">
-                  Trabajamos con varios seguros médicos y ofrecemos planes de financiamiento flexibles. Nuestro equipo
-                  de admisiones puede ayudarte a verificar tu cobertura y explorar opciones de pago. Creemos que el
+                  Por ahora no trabajamos con seguros médicos pero ofrecemos planes de financiamiento flexibles. Nuestro equipo
+                  de admisiones puede ayudarte a explorar opciones de pago. Creemos que el
                   costo no debe ser una barrera para recibir el tratamiento que necesitas.
                 </AccordionContent>
               </AccordionItem>
@@ -300,16 +596,17 @@ export default function TratamientoPage() {
               tus necesidades específicas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" />
-                Consulta Gratuita
-              </Button>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
+                  <WhatsAppIcon className="mr-2 h-5 w-5" />
+                  Consulta Gratuita
+                </Button>
+              </a>
               <Link href="/admision">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-emerald-600"
-                >
+                  className="bg-white text-emerald-600 hover:bg-gray-100">
                   Proceso de Admisión
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

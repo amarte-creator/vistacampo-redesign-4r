@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Heart } from "lucide-react"
+import { MessageCircle, Mail, MapPin, Facebook, Twitter, Instagram, Heart } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 export function Footer() {
   return (
@@ -78,8 +80,10 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-emerald-400">Contacto</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-emerald-400" />
-                <span className="text-gray-300">(+58) 412-231-5968</span>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                  <WhatsAppIcon className="h-5 w-5 text-emerald-400" />
+                  <span className="text-gray-300">(+58) 412-231-5968</span>
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-emerald-400" />
@@ -91,10 +95,12 @@ export function Footer() {
               </div>
             </div>
             <div className="pt-4">
-              <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                <Phone className="mr-2 h-4 w-4" />
-                Solicita Ayuda 24/7
-              </Button>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
+                  <WhatsAppIcon className="mr-2 h-4 w-4" />
+                  Solicita Ayuda 24/7
+                </Button>
+              </a>
             </div>
           </div>
         </div>

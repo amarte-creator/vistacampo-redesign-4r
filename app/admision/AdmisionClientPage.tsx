@@ -14,18 +14,26 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import {
-  Phone,
+  MessageCircle,
   Mail,
   FileText,
+  Calendar,
+  CheckCircle,
+  ArrowRight,
   Clock,
   Shield,
+  Users,
   Heart,
-  CheckCircle,
-  User,
+  Star,
+  MapPin,
+  Phone,
   CreditCard,
+  User,
   AlertCircle,
   Send,
 } from "lucide-react"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 export default function AdmisionClientPage() {
   const [currentStep, setCurrentStep] = useState(1)
@@ -138,7 +146,7 @@ export default function AdmisionClientPage() {
                   <div
                     className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 ${currentStep >= 1 ? "bg-emerald-600 text-white" : "bg-gray-200 text-gray-600"}`}
                   >
-                    <Phone className="h-6 w-6" />
+                    <WhatsAppIcon className="h-6 w-6" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">1. Contacto Inicial</h3>
                   <p className="text-sm text-gray-600">
@@ -691,14 +699,16 @@ export default function AdmisionClientPage() {
                 primer paso hacia la recuperación ahora mismo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Llamar Ahora: (+58) 412-231-5968
-                </Button>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="lg"
+                    variant="secondary"
+                    className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
+                  >
+                    <WhatsAppIcon className="mr-2 h-5 w-5" />
+                    Llamar Ahora: (+58) 412-231-5968
+                  </Button>
+                </a>
                 <Button
                   size="lg"
                   variant="outline"

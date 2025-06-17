@@ -23,9 +23,17 @@ import {
   Car,
   Camera,
   ZoomIn,
+  MessageCircle,
+  Building2,
+  Trees,
+  Star,
+  MapPin,
+  Clock,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 const instalacionesData = {
   habitaciones: [
@@ -583,14 +591,16 @@ export default function InstalacionesPage() {
                 primera mano el ambiente donde comenzarás tu proceso de recuperación.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Agendar Visita
-                </Button>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="lg"
+                    variant="secondary"
+                    className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
+                  >
+                    <WhatsAppIcon className="mr-2 h-5 w-5" />
+                    Agendar Visita
+                  </Button>
+                </a>
                 <Link href="/contacto">
                   <Button
                     size="lg"

@@ -3,12 +3,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Shield, Users, Phone, Star, ArrowRight, CheckCircle } from "lucide-react"
+import { Heart, Shield, Users, MessageCircle, Star, ArrowRight, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-
-const WHATSAPP_LINK =
-  "https://wa.me/584122315968?text=Gracias%20por%20comunicarte%20con%20Centro%20Vistacampo.%20%C2%BFC%C3%B3mo%20podemos%20ayudarte?"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 export default function HomePage() {
   return (
@@ -35,7 +34,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <Phone className="mr-2 h-5 w-5" />
+                  <WhatsAppIcon className="mr-2 h-5 w-5" />
                   Solicita Ayuda Ahora
                 </Button>
               </a>
@@ -256,7 +255,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
                     <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 w-full">
-                      <Phone className="mr-2 h-4 w-4" />
+                      <WhatsAppIcon className="mr-2 h-4 w-4" />
                       Contacta con Nosotros
                     </Button>
                   </a>
@@ -492,7 +491,7 @@ export default function HomePage() {
                     variant="secondary"
                     className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
-                    <Phone className="mr-2 h-5 w-5" />
+                    <WhatsAppIcon className="mr-2 h-5 w-5" />
                     Contactar por WhatsApp
                   </Button>
                 </a>
@@ -500,7 +499,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-emerald-600 text-lg px-8 py-4"
+                    className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
                     Más Información
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -517,7 +516,7 @@ export default function HomePage() {
                   <span>Atención Personalizada</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <Phone className="h-4 w-4" />
+                  <WhatsAppIcon className="h-4 w-4" />
                   <span>Disponible 24/7</span>
                 </div>
               </div>

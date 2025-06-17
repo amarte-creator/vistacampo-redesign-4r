@@ -4,7 +4,9 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Phone, MessageCircle, Calendar, ArrowRight, Clock, Shield, Heart, X } from "lucide-react"
+import { MessageCircle, Calendar, ArrowRight, Clock, Shield, Heart, X } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 interface CTAOptimizedProps {
   variant?: "emergency" | "consultation" | "admission" | "floating"
@@ -58,7 +60,7 @@ export function CTAOptimized({
           primaryAction: primaryAction || "Llamada de Emergencia",
           secondaryAction: secondaryAction || "Chat de Crisis",
           urgencyText: "Línea de crisis 24/7",
-          icon: Phone,
+          icon: WhatsAppIcon,
         }
       case "admission":
         return {
@@ -80,7 +82,7 @@ export function CTAOptimized({
           primaryAction: "Llamar Ahora",
           secondaryAction: "Chat",
           urgencyText: "Disponible 24/7",
-          icon: MessageCircle,
+          icon: WhatsAppIcon,
           textColor: "text-gray-900",
         }
       default:
@@ -93,7 +95,7 @@ export function CTAOptimized({
           primaryAction: primaryAction || "Agendar Consulta",
           secondaryAction: secondaryAction || "Llamar Ahora",
           urgencyText: "Consulta gratuita",
-          icon: Phone,
+          icon: WhatsAppIcon,
         }
     }
   }
@@ -139,7 +141,7 @@ export function CTAOptimized({
                         : "bg-white text-emerald-600 hover:bg-gray-100"
                     }
                   >
-                    <Phone className="mr-1 h-3 w-3" />
+                    <WhatsAppIcon className="mr-1 h-3 w-3" />
                     {config.primaryAction}
                   </Button>
                   <Button
@@ -151,7 +153,7 @@ export function CTAOptimized({
                         : "border-white text-white hover:bg-white hover:text-emerald-600"
                     }
                   >
-                    <MessageCircle className="mr-1 h-3 w-3" />
+                    <WhatsAppIcon className="mr-1 h-3 w-3" />
                     {config.secondaryAction}
                   </Button>
                 </div>
@@ -195,7 +197,7 @@ export function CTAOptimized({
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-emerald-600 text-lg px-8 py-4"
               >
-                <MessageCircle className="mr-2 h-5 w-5" />
+                <WhatsAppIcon className="mr-2 h-5 w-5" />
                 {config.secondaryAction}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

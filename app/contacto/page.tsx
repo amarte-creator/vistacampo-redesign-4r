@@ -10,7 +10,9 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, MapPin, Clock, Send, Shield, Heart } from "lucide-react"
+import { MessageCircle, Mail, MapPin, Clock, Send, Shield, Heart } from "lucide-react"
+import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -56,8 +58,10 @@ export default function ContactoPage() {
                 <span>Atención Inmediata</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-emerald-600" />
-                <span>Disponible 24/7</span>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <WhatsAppIcon className="h-4 w-4 text-emerald-600" />
+                  <span>Disponible 24/7</span>
+                </a>
               </div>
             </div>
           </div>
@@ -84,7 +88,9 @@ export default function ContactoPage() {
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="bg-emerald-100 p-3 rounded-full">
-                          <Phone className="h-6 w-6 text-emerald-600" />
+                          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                            <WhatsAppIcon className="h-6 w-6 text-emerald-600" />
+                          </a>
                         </div>
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-2">Teléfono de Emergencia</h3>
@@ -260,7 +266,7 @@ export default function ContactoPage() {
                       </div>
 
                       <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg py-3">
-                        <Send className="mr-2 h-5 w-5" />
+                        <MessageCircle className="mr-2 h-5 w-5" />
                         Enviar Consulta
                       </Button>
 
@@ -335,15 +341,17 @@ export default function ContactoPage() {
               <div className="relative">
                 <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-8 h-96 flex items-center justify-center">
                   <div className="text-center">
-                    <MapPin className="h-16 w-16 text-emerald-600 mx-auto mb-4" />
+                    <MessageCircle className="h-16 w-16 text-emerald-600 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Mapa Interactivo</h3>
                     <p className="text-gray-600 mb-4">
                       El mapa detallado con la ubicación exacta se proporcionará durante el proceso de admisión.
                     </p>
-                    <Button className="bg-emerald-600 hover:bg-emerald-700">
-                      <Phone className="mr-2 h-4 w-4" />
-                      Solicitar Ubicación
-                    </Button>
+                    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                      <Button className="bg-emerald-600 hover:bg-emerald-700">
+                        <WhatsAppIcon className="mr-2 h-4 w-4" />
+                        Solicitar Ubicación
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -363,14 +371,16 @@ export default function ContactoPage() {
                 disponible las 24 horas del día.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="bg-white text-red-600 hover:bg-gray-100 text-lg px-8 py-4"
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Llamada de Emergencia
-                </Button>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    size="lg"
+                    variant="secondary"
+                    className="bg-white text-red-600 hover:bg-gray-100 text-lg px-8 py-4"
+                  >
+                    <WhatsAppIcon className="mr-2 h-5 w-5" />
+                    Llamada de Emergencia
+                  </Button>
+                </a>
                 <Button
                   size="lg"
                   variant="outline"

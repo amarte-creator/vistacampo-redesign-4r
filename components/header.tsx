@@ -5,7 +5,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Phone, Mail, Facebook, Twitter, MapPin } from "lucide-react"
+import { Menu, MessageCircle, Mail, Facebook, Twitter, MapPin } from "lucide-react"
+import { WhatsAppIcon } from "./whatsapp-icon"
+import { WHATSAPP_LINK } from "@/lib/constants"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,8 +29,8 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center gap-2">
             <div className="flex flex-wrap items-center gap-4">
-              <a href="tel:+584122315968" className="flex items-center gap-1 hover:text-emerald-200 transition-colors">
-                <Phone className="h-3 w-3" />
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-emerald-200 transition-colors">
+                <WhatsAppIcon className="h-3 w-3" />
                 <span>(+58) 412-231-5968</span>
               </a>
               <a
@@ -83,10 +85,12 @@ export function Header() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button className="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 shadow-lg">
-              <Phone className="mr-2 h-4 w-4" />
-              Solicita Ayuda
-            </Button>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button className="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 shadow-lg">
+                <WhatsAppIcon className="mr-2 h-4 w-4" />
+                Solicita Ayuda
+              </Button>
+            </a>
 
             {/* Mobile Navigation */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -114,10 +118,12 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
-                  <Button className="mt-4 bg-emerald-600 hover:bg-emerald-700">
-                    <Phone className="mr-2 h-4 w-4" />
-                    Solicita Ayuda
-                  </Button>
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                    <Button className="mt-4 bg-emerald-600 hover:bg-emerald-700">
+                      <WhatsAppIcon className="mr-2 h-4 w-4" />
+                      Solicita Ayuda
+                    </Button>
+                  </a>
                 </div>
               </SheetContent>
             </Sheet>
