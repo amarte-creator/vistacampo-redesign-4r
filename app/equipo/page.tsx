@@ -29,23 +29,23 @@ const equipoData = {
   direccion: [
     {
       id: 1,
-      nombre: "Dr. Carlos Mendoza",
-      cargo: "Director Médico",
-      especialidad: "Psiquiatría y Adicciones",
-      imagen: "/placeholder.svg?height=400&width=400",
+      nombre: "Julio González",
+      cargo: "Fundador y Director Vistacampo",
+      especialidad: "Adicciones",
+      imagen: "/images/Julio-Gonzales-Fundador y Director Vistacampo.jpg",
       experiencia: "20+ años",
-      educacion: ["MD - Universidad Central de Venezuela", "Especialización en Psiquiatría - Hospital Universitario"],
-      certificaciones: ["Certificado en Medicina de Adicciones", "Miembro de la Sociedad Venezolana de Psiquiatría"],
+      educacion: ["MD - Universidad Central de Venezuela", "Especialización en Adicciones - Hospital Universitario"],
+      certificaciones: ["Certificado en Medicina de Adicciones", "Miembro de la Sociedad Venezolana de Adicciones"],
       descripcion:
-        "El Dr. Mendoza lidera nuestro equipo con más de dos décadas de experiencia en el tratamiento de adicciones. Su enfoque integral combina la medicina tradicional con terapias innovadoras, priorizando siempre la dignidad y el bienestar del paciente.",
+        "Julio González lidera nuestro equipo con más de dos décadas de experiencia en el tratamiento de adicciones. Su enfoque integral combina la medicina tradicional con terapias innovadoras, priorizando siempre la dignidad y el bienestar del paciente.",
       especialidades: ["Desintoxicación médica", "Trastornos duales", "Farmacoterapia"],
     },
     {
       id: 2,
-      nombre: "Dra. María Elena Rodríguez",
-      cargo: "Directora de Terapias",
+      nombre: "Dra. María Alvarez",
+      cargo: "Miembro del comite científico",
       especialidad: "Psicología Clínica",
-      imagen: "/placeholder.svg?height=400&width=400",
+      imagen: "/images/Maria-Alvares-Miembro del comité Científico.jpg",
       experiencia: "15+ años",
       educacion: [
         "Licenciatura en Psicología - Universidad Católica Andrés Bello",
@@ -122,29 +122,27 @@ const equipoData = {
   terapeutas: [
     {
       id: 7,
-      nombre: "Lic. Miguel Torres",
-      cargo: "Terapeuta Ocupacional",
-      especialidad: "Terapia Ocupacional",
-      imagen: "/placeholder.svg?height=400&width=400",
-      experiencia: "8+ años",
-      educacion: ["Licenciatura en Terapia Ocupacional - Universidad Simón Bolívar"],
-      certificaciones: ["Especialista en Rehabilitación", "Certificado en Arte Terapia"],
-      descripcion:
-        "Miguel diseña y coordina actividades terapéuticas que ayudan a los pacientes a desarrollar habilidades para la vida diaria y a encontrar nuevas formas de expresión y sanación.",
-      especialidades: ["Rehabilitación funcional", "Arte terapia", "Habilidades para la vida"],
+      nombre: "Pau Saman",
+      cargo: "Equipo terapéutico",
+      especialidad: "Equipo terapéutico",
+      imagen: "/images/Pau-Saman-Equipo terapeutico.png",
+      experiencia: "",
+      educacion: [],
+      certificaciones: [],
+      descripcion: "",
+      especialidades: [],
     },
     {
       id: 8,
-      nombre: "Lic. Patricia Herrera",
-      cargo: "Trabajadora Social",
-      especialidad: "Trabajo Social Clínico",
-      imagen: "/placeholder.svg?height=400&width=400",
-      experiencia: "12+ años",
-      educacion: ["Licenciatura en Trabajo Social - Universidad Central de Venezuela"],
-      certificaciones: ["Especialista en Trabajo Social Clínico", "Certificación en Intervención en Crisis"],
-      descripcion:
-        "Patricia coordina el apoyo social y la reintegración comunitaria de nuestros pacientes, trabajando estrechamente con las familias y las redes de apoyo.",
-      especialidades: ["Reintegración social", "Apoyo familiar", "Intervención en crisis"],
+      nombre: "Alejandro Marquez",
+      cargo: "Equipo terapéutico",
+      especialidad: "Equipo terapéutico",
+      imagen: "/images/Alejandro-Marquez-Equipo terapeutico.png",
+      experiencia: "",
+      educacion: [],
+      certificaciones: [],
+      descripcion: "",
+      especialidades: [],
     },
   ],
 }
@@ -228,7 +226,7 @@ export default function EquipoPage() {
             </div>
 
             <Tabs defaultValue="direccion" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-12">
+              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3 mb-12">
                 <TabsTrigger value="direccion" className="flex items-center gap-2">
                   <Shield className="h-4 w-4" />
                   Dirección
@@ -236,10 +234,6 @@ export default function EquipoPage() {
                 <TabsTrigger value="medicos" className="flex items-center gap-2">
                   <Stethoscope className="h-4 w-4" />
                   Médicos
-                </TabsTrigger>
-                <TabsTrigger value="psicologos" className="flex items-center gap-2">
-                  <Brain className="h-4 w-4" />
-                  Psicólogos
                 </TabsTrigger>
                 <TabsTrigger value="terapeutas" className="flex items-center gap-2">
                   <Heart className="h-4 w-4" />
@@ -375,70 +369,6 @@ export default function EquipoPage() {
                 </div>
               </TabsContent>
 
-              {/* Psicólogos */}
-              <TabsContent value="psicologos" className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-8">
-                  {equipoData.psicologos.map((miembro) => (
-                    <Card
-                      key={miembro.id}
-                      className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300"
-                    >
-                      <CardContent className="p-0">
-                        <div className="grid md:grid-cols-5 gap-6">
-                          <div className="md:col-span-2 p-6">
-                            <div className="relative">
-                              <Image
-                                src={miembro.imagen || "/placeholder.svg"}
-                                alt={`${miembro.nombre} - ${miembro.cargo}`}
-                                width={400}
-                                height={400}
-                                className="w-full h-48 md:h-full object-cover rounded-lg"
-                              />
-                              <div className="absolute top-2 right-2">
-                                <Badge variant="secondary" className="bg-purple-100 text-purple-700">
-                                  {miembro.experiencia}
-                                </Badge>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="md:col-span-3 p-6 space-y-4">
-                            <div>
-                              <h3 className="text-xl font-bold text-gray-900">{miembro.nombre}</h3>
-                              <p className="text-purple-600 font-semibold">{miembro.cargo}</p>
-                              <p className="text-gray-600">{miembro.especialidad}</p>
-                            </div>
-                            <p className="text-gray-700 text-sm leading-relaxed">{miembro.descripcion}</p>
-                            <div className="space-y-3">
-                              <div>
-                                <h4 className="font-semibold text-gray-900 text-sm mb-1">Educación:</h4>
-                                <ul className="space-y-1">
-                                  {miembro.educacion.map((edu, index) => (
-                                    <li key={index} className="text-xs text-gray-600 flex items-start gap-2">
-                                      <GraduationCap className="h-3 w-3 text-purple-600 mt-0.5 flex-shrink-0" />
-                                      {edu}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div>
-                                <h4 className="font-semibold text-gray-900 text-sm mb-1">Especialidades:</h4>
-                                <div className="flex flex-wrap gap-1">
-                                  {miembro.especialidades.map((esp, index) => (
-                                    <Badge key={index} variant="outline" className="text-xs">
-                                      {esp}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-
               {/* Terapeutas */}
               <TabsContent value="terapeutas" className="space-y-8">
                 <div className="grid md:grid-cols-2 gap-8">
@@ -458,42 +388,13 @@ export default function EquipoPage() {
                                 height={400}
                                 className="w-full h-48 md:h-full object-cover rounded-lg"
                               />
-                              <div className="absolute top-2 right-2">
-                                <Badge variant="secondary" className="bg-orange-100 text-orange-700">
-                                  {miembro.experiencia}
-                                </Badge>
-                              </div>
                             </div>
                           </div>
                           <div className="md:col-span-3 p-6 space-y-4">
                             <div>
                               <h3 className="text-xl font-bold text-gray-900">{miembro.nombre}</h3>
-                              <p className="text-orange-600 font-semibold">{miembro.cargo}</p>
+                              <p className="text-emerald-600 font-semibold">{miembro.cargo}</p>
                               <p className="text-gray-600">{miembro.especialidad}</p>
-                            </div>
-                            <p className="text-gray-700 text-sm leading-relaxed">{miembro.descripcion}</p>
-                            <div className="space-y-3">
-                              <div>
-                                <h4 className="font-semibold text-gray-900 text-sm mb-1">Educación:</h4>
-                                <ul className="space-y-1">
-                                  {miembro.educacion.map((edu, index) => (
-                                    <li key={index} className="text-xs text-gray-600 flex items-start gap-2">
-                                      <GraduationCap className="h-3 w-3 text-orange-600 mt-0.5 flex-shrink-0" />
-                                      {edu}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div>
-                                <h4 className="font-semibold text-gray-900 text-sm mb-1">Especialidades:</h4>
-                                <div className="flex flex-wrap gap-1">
-                                  {miembro.especialidades.map((esp, index) => (
-                                    <Badge key={index} variant="outline" className="text-xs">
-                                      {esp}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>

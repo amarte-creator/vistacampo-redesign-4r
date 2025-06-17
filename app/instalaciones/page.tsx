@@ -587,7 +587,7 @@ export default function InstalacionesPage() {
               <Camera className="h-16 w-16 mx-auto mb-6 text-white" />
               <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Te Gustaría Conocer Nuestras Instalaciones?</h2>
               <p className="text-xl mb-8 opacity-90">
-                Programa una visita personalizada o solicita un tour virtual de nuestras instalaciones. Conoce de
+                Programa una visita personalizada de nuestras instalaciones. Conoce de
                 primera mano el ambiente donde comenzarás tu proceso de recuperación.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -601,16 +601,6 @@ export default function InstalacionesPage() {
                     Agendar Visita
                   </Button>
                 </a>
-                <Link href="/contacto">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-emerald-600 text-lg px-8 py-4"
-                  >
-                    Tour Virtual
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
               </div>
               <p className="text-sm opacity-80 mt-6">
                 Visitas disponibles de lunes a domingo • Completamente confidencial • Sin compromiso
