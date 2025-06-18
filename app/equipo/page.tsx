@@ -60,7 +60,7 @@ const equipoData = {
   medicos: [
     {
       id: 3,
-      nombre: "Dr. Alejandro Pérez",
+      nombre: "Dra. Milagros",
       cargo: "Médico Internista",
       especialidad: "Medicina Interna",
       imagen: "/placeholder.svg?height=400&width=400",
@@ -73,15 +73,15 @@ const equipoData = {
     },
     {
       id: 4,
-      nombre: "Dra. Carmen Vásquez",
+      nombre: "Dr. Eduardo Landaeta",
       cargo: "Médico Psiquiatra",
       especialidad: "Psiquiatría",
-      imagen: "/placeholder.svg?height=400&width=400",
-      experiencia: "18+ años",
+      imagen: "/images/eduardo-landaeta.png",
+      experiencia: "10+ años",
       educacion: ["MD - Universidad Central de Venezuela", "Residencia en Psiquiatría - Instituto Psiquiátrico"],
-      certificaciones: ["Especialista en Psiquiatría", "Certificación en Psicogeriatría"],
+      certificaciones: ["Especialista en Psiquiatría"],
       descripcion:
-        "La Dra. Vásquez se especializa en el diagnóstico y tratamiento de trastornos mentales concurrentes con las adicciones, proporcionando un enfoque integral para la salud mental.",
+        "El doctor Eduardo se especializa en el diagnóstico y tratamiento de trastornos mentales concurrentes con las adicciones, proporcionando un enfoque integral para la salud mental.",
       especialidades: ["Trastornos duales", "Psicofarmacología", "Trastornos del estado de ánimo"],
     },
   ],
@@ -561,42 +561,6 @@ export default function EquipoPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Quieres Conocer Más sobre Nuestro Equipo?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Nuestros profesionales están disponibles para responder tus preguntas y brindarte la orientación que
-              necesitas. Agenda una consulta inicial sin compromiso.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Agendar Consulta
-              </Button>
-              <Link href="/contacto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-emerald-600 text-lg px-8 py-4"
-                >
-                  Contactar Equipo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </div>
-            <p className="text-sm opacity-80 mt-6">
-              Consulta inicial gratuita • Disponible 24/7 • Completamente confidencial
-            </p>
           </div>
         </div>
       </section>

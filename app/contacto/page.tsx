@@ -72,9 +72,9 @@ export default function ContactoPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 justify-center">
               {/* Información de Contacto */}
-              <div className="space-y-8">
+              <div className="space-y-8 lg:col-span-2 max-w-xl mx-auto">
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Información de Contacto</h2>
                   <p className="text-lg text-gray-700 mb-8">
@@ -172,112 +172,6 @@ export default function ContactoPage() {
                   </Card>
                 </div>
               </div>
-
-              {/* Formulario de Contacto */}
-              <div>
-                <Card className="shadow-2xl">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-gray-900">Solicita Información</CardTitle>
-                    <CardDescription className="text-gray-600">
-                      Completa este formulario y nos pondremos en contacto contigo de inmediato. Toda la información es
-                      estrictamente confidencial.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="nombre">Nombre Completo *</Label>
-                          <Input
-                            id="nombre"
-                            type="text"
-                            placeholder="Tu nombre completo"
-                            value={formData.nombre}
-                            onChange={(e) => handleInputChange("nombre", e.target.value)}
-                            required
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="telefono">Teléfono *</Label>
-                          <Input
-                            id="telefono"
-                            type="tel"
-                            placeholder="+58 412-000-0000"
-                            value={formData.telefono}
-                            onChange={(e) => handleInputChange("telefono", e.target.value)}
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Correo Electrónico *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="tu@email.com"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="tipoConsulta">Tipo de Consulta *</Label>
-                        <Select onValueChange={(value) => handleInputChange("tipoConsulta", value)}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Selecciona el tipo de consulta" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="informacion-general">Información General</SelectItem>
-                            <SelectItem value="admision">Proceso de Admisión</SelectItem>
-                            <SelectItem value="tratamiento">Consulta sobre Tratamiento</SelectItem>
-                            <SelectItem value="seguros">Seguros y Financiamiento</SelectItem>
-                            <SelectItem value="familia">Apoyo para Familiares</SelectItem>
-                            <SelectItem value="emergencia">Situación de Emergencia</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="mensaje">Mensaje *</Label>
-                        <Textarea
-                          id="mensaje"
-                          placeholder="Cuéntanos cómo podemos ayudarte. Toda la información será tratada de manera confidencial."
-                          rows={4}
-                          value={formData.mensaje}
-                          onChange={(e) => handleInputChange("mensaje", e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <div className="flex items-start gap-3">
-                          <Shield className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                          <div className="text-sm text-gray-600">
-                            <p className="font-medium text-gray-900 mb-1">Privacidad y Confidencialidad</p>
-                            <p>
-                              Toda la información proporcionada será tratada con absoluta confidencialidad y solo será
-                              utilizada para brindarte la mejor atención posible. Cumplimos con todas las normativas de
-                              privacidad médica.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg py-3">
-                        <MessageCircle className="mr-2 h-5 w-5" />
-                        Enviar Consulta
-                      </Button>
-
-                      <p className="text-xs text-gray-500 text-center">
-                        Al enviar este formulario, aceptas que nos pongamos en contacto contigo para brindarte
-                        información sobre nuestros servicios.
-                      </p>
-                    </form>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
           </div>
         </div>
@@ -339,21 +233,20 @@ export default function ContactoPage() {
               </div>
 
               <div className="relative">
-                <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-                  <div className="text-center">
-                    <MessageCircle className="h-16 w-16 text-emerald-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Mapa Interactivo</h3>
-                    <p className="text-gray-600 mb-4">
-                      El mapa detallado con la ubicación exacta se proporcionará durante el proceso de admisión.
-                    </p>
-                    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-emerald-600 hover:bg-emerald-700">
-                        <WhatsAppIcon className="mr-2 h-4 w-4" />
-                        Solicitar Ubicación
-                      </Button>
-                    </a>
-                  </div>
-                </div>
+                <Card className="shadow-xl border-0 overflow-hidden rounded-2xl">
+                  <CardContent className="p-0">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.1262873928918!2d-67.27949162471772!3d10.41154338971597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a8764c62e816b%3A0x312e943a6976c6bc!2sCentro%20Terapeutico%20Vistacampo!5e0!3m2!1ses!2sfr!4v1750273808692!5m2!1ses!2sfr"
+                      width="100%"
+                      height="400"
+                      style={{ border: 0, borderRadius: '1rem', width: '100%' }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Ubicación Centro Terapéutico Vistacampo"
+                    ></iframe>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -381,14 +274,6 @@ export default function ContactoPage() {
                     Llamada de Emergencia
                   </Button>
                 </a>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-red-600 text-lg px-8 py-4"
-                >
-                  <Mail className="mr-2 h-5 w-5" />
-                  Chat en Vivo
-                </Button>
               </div>
               <p className="text-sm opacity-80 mt-6">
                 Línea de crisis disponible 24/7 • Respuesta inmediata • Completamente confidencial
