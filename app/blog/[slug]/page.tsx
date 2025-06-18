@@ -46,22 +46,50 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <article className="max-w-3xl mx-auto py-16 px-4">
-      {post.frontMatter.image && (
-        <img 
-          src={post.frontMatter.image} 
-          alt={post.frontMatter.title} 
-          className="rounded-xl mb-8 w-full object-cover" 
-        />
-      )}
-      <h1 className="text-4xl font-bold mb-4">{post.frontMatter.title}</h1>
-      <p className="text-gray-500 mb-8">
-        {new Date(post.frontMatter.date).toLocaleDateString('es-ES')}
-      </p>
+    <article className="max-w-4xl mx-auto py-16 px-4">
+      {/* Header Section */}
+      <header className="mb-12 text-center">
+        {post.frontMatter.image && (
+          <div className="mb-8">
+            <img 
+              src={post.frontMatter.image} 
+              alt={post.frontMatter.title} 
+              className="rounded-xl shadow-lg w-full max-w-2xl mx-auto object-cover" 
+            />
+          </div>
+        )}
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {post.frontMatter.title}
+        </h1>
+        <div className="flex items-center justify-center gap-4 text-gray-600 mb-6">
+          <time dateTime={post.frontMatter.date} className="text-lg">
+            {new Date(post.frontMatter.date).toLocaleDateString('es-ES', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+        </div>
+        <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          {post.frontMatter.description}
+        </p>
+      </header>
+
+      {/* Content Section */}
       <div 
-        className="prose prose-lg max-w-none"
+        className="blog-content prose prose-lg max-w-none"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+      
+      {/* Footer Section */}
+      <footer className="mt-16 pt-8 border-t border-gray-200">
+        <div className="text-center text-gray-600">
+          <p className="text-lg italic">
+            "En Vistacampo, nos especializamos en proporcionar tratamientos integrales y personalizados, 
+            combinando las mejores prácticas internacionales con un entorno natural único."
+          </p>
+        </div>
+      </footer>
     </article>
   )
 } 
