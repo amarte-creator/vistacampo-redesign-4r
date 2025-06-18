@@ -21,21 +21,26 @@ type Post = {
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 async function getPosts(): Promise<Post[]> {
-  const files = fs.readdirSync(postsDirectory);
-  return files
-    .filter((file) => file.endsWith('.mdx'))
-    .map((file) => {
-      const source = fs.readFileSync(path.join(postsDirectory, file), 'utf8');
-      const { data } = matter(source);
-      return {
-        title: data.title,
-        description: data.description,
-        date: data.date,
-        slug: data.slug,
-        image: data.image,
-      };
-    })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  try {
+    const files = fs.readdirSync(postsDirectory);
+    return files
+      .filter((file) => file.endsWith('.mdx'))
+      .map((file) => {
+        const source = fs.readFileSync(path.join(postsDirectory, file), 'utf8');
+        const { data } = matter(source);
+        return {
+          title: data.title,
+          description: data.description,
+          date: data.date,
+          slug: data.slug,
+          image: data.image,
+        };
+      })
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  } catch (error) {
+    console.warn('No posts directory found or error reading posts:', error);
+    return [];
+  }
 }
 
 export const metadata: Metadata = {

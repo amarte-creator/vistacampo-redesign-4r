@@ -8,21 +8,34 @@ import Head from 'next/head'
 const postsDirectory = path.join(process.cwd(), 'posts')
 
 export async function generateStaticParams() {
-  const filenames = fs.readdirSync(postsDirectory)
-  return filenames.map((filename) => {
-    const { data } = matter(fs.readFileSync(path.join(postsDirectory, filename), 'utf8'))
-    return { slug: data.slug }
-  })
+  try {
+    const filenames = fs.readdirSync(postsDirectory)
+    return filenames.map((filename) => {
+      const { data } = matter(fs.readFileSync(path.join(postsDirectory, filename), 'utf8'))
+      return { slug: data.slug }
+    })
+  } catch (error) {
+    console.warn('No posts directory found or error reading posts:', error)
+    return []
+  }
 }
 
 async function getPostBySlug(slug: string) {
-  const filenames = fs.readdirSync(postsDirectory)
-  const file = filenames.find((f) => f.endsWith('.mdx') && f.includes(slug))
-  if (!file) return null
-  const source = fs.readFileSync(path.join(postsDirectory, file), 'utf8')
-  const { content, data } = matter(source)
-  const mdxSource = await serialize(content, { scope: data })
-  return { frontMatter: data, mdxSource }
+  try {
+    const filenames = fs.readdirSync(postsDirectory)
+    for (const filename of filenames) {
+      const source = fs.readFileSync(path.join(postsDirectory, filename), 'utf8')
+      const { content, data } = matter(source)
+      if (data.slug === slug) {
+        const mdxSource = await serialize(content, { scope: data })
+        return { frontMatter: data, mdxSource }
+      }
+    }
+    return null
+  } catch (error) {
+    console.warn('No posts directory found or error reading posts:', error)
+    return null
+  }
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
