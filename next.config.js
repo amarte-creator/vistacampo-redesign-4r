@@ -1,16 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    mdxRs: true,
-  },
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
     unoptimized: true,
   },
-  trailingSlash: true, // importante para que los links funcionen
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
