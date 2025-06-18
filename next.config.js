@@ -10,6 +10,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  trailingSlash: true, // importante para que los links funcionen
 };
 
 module.exports = nextConfig;
