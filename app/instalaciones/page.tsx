@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   Home,
@@ -251,6 +251,7 @@ export default function InstalacionesPage() {
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-4xl">
+                            <DialogTitle className="sr-only">{habitacion.titulo}</DialogTitle>
                             <Image
                               src={habitacion.imagen || "/placeholder.svg"}
                               alt={habitacion.titulo}
@@ -310,6 +311,7 @@ export default function InstalacionesPage() {
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-4xl">
+                            <DialogTitle className="sr-only">{zona.titulo}</DialogTitle>
                             <Image
                               src={zona.imagen || "/placeholder.svg"}
                               alt={zona.titulo}
@@ -369,6 +371,7 @@ export default function InstalacionesPage() {
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-4xl">
+                            <DialogTitle className="sr-only">{exterior.titulo}</DialogTitle>
                             <Image
                               src={exterior.imagen || "/placeholder.svg"}
                               alt={exterior.titulo}
