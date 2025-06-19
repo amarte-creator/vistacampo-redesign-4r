@@ -597,7 +597,7 @@ export default function InstalacionesPage() {
                     variant="secondary"
                     className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
                   >
-                    <WhatsAppIcon className="mr-2 h-5 w-5" />
+                    <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                     Agendar Visita
                   </Button>
                 </a>

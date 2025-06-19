@@ -3,14 +3,15 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 interface WhatsAppIconProps {
   className?: string
+  color?: string
 }
 
-export function WhatsAppIcon({ className = "h-5 w-5" }: WhatsAppIconProps) {
+export function WhatsAppIcon({ className = "h-5 w-5", color = "#fff" }: WhatsAppIconProps) {
   return (
     <FontAwesomeIcon 
       icon={faWhatsapp} 
       className={className}
-      style={{ color: '#25D366' }} // WhatsApp brand color
+      style={{ color }}
     />
   )
 } 

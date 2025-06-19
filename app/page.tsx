@@ -34,7 +34,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <WhatsAppIcon className="mr-2 h-5 w-5" />
+                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                   Solicita Ayuda Ahora
                 </Button>
               </a>
@@ -114,12 +114,14 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <Link href="/equipo">
-                  <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300">
-                    Conoce Más Sobre Nosotros
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <div className="mt-6">
+                  <Link href="/equipo">
+                    <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300">
+                      Conoce Más Sobre Nosotros
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
               <div className="relative">
                 <Image
@@ -255,7 +257,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
                     <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 w-full">
-                      <WhatsAppIcon className="mr-2 h-4 w-4" />
+                      <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
                       Contacta con Nosotros
                     </Button>
                   </a>
@@ -491,7 +493,7 @@ export default function HomePage() {
                     variant="secondary"
                     className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
-                    <WhatsAppIcon className="mr-2 h-5 w-5" />
+                    <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                     Contactar por WhatsApp
                   </Button>
                 </a>
@@ -516,7 +518,7 @@ export default function HomePage() {
                   <span>Atención Personalizada</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <WhatsAppIcon className="h-4 w-4" />
+                  <WhatsAppIcon className="h-4 w-4" color="#10b981" />
                   <span>Disponible 24/7</span>
                 </div>
               </div>

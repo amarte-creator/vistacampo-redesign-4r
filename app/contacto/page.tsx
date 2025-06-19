@@ -59,7 +59,7 @@ export default function ContactoPage() {
               </div>
               <div className="flex items-center gap-2">
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <WhatsAppIcon className="h-4 w-4 text-emerald-600" />
+                  <WhatsAppIcon className="h-4 w-4 text-emerald-600" color="#10b981" />
                   <span>Disponible 24/7</span>
                 </a>
               </div>
@@ -89,7 +89,7 @@ export default function ContactoPage() {
                       <div className="flex items-start gap-4">
                         <div className="bg-emerald-100 p-3 rounded-full">
                           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                            <WhatsAppIcon className="h-6 w-6 text-emerald-600" />
+                            <WhatsAppIcon className="h-6 w-6 text-emerald-600" color="#10b981" />
                           </a>
                         </div>
                         <div>
@@ -270,7 +270,7 @@ export default function ContactoPage() {
                     variant="secondary"
                     className="bg-white text-red-600 hover:bg-gray-100 text-lg px-8 py-4"
                   >
-                    <WhatsAppIcon className="mr-2 h-5 w-5" />
+                    <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                     Llamada de Emergencia
                   </Button>
                 </a>

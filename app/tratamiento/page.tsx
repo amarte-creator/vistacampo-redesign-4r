@@ -33,7 +33,7 @@ export default function TratamientoPage() {
             </p>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                <WhatsAppIcon className="mr-2 h-5 w-5" />
+                <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                 Consulta Gratuita
               </Button>
             </a>
@@ -598,7 +598,7 @@ export default function TratamientoPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" />
+                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                   Consulta Gratuita
                 </Button>
               </a>

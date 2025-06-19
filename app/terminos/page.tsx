@@ -185,10 +185,8 @@ export default function TerminosPage() {
                   <CardContent>
                     <ul className="text-sm text-gray-700 space-y-1">
                       <li>• Pagar los servicios según lo acordado</li>
-                      <li>• Proporcionar información de seguro precisa</li>
                       <li>• Notificar cambios en la cobertura</li>
                       <li>• Cumplir con los planes de pago</li>
-                      <li>• Cubrir servicios no cubiertos por seguro</li>
                     </ul>
                   </CardContent>
                 </Card>
@@ -220,13 +218,6 @@ export default function TerminosPage() {
                 <li>Los pagos vencen según los términos acordados en el contrato de servicios</li>
                 <li>Se pueden aplicar cargos por pagos tardíos</li>
                 <li>Los servicios pueden suspenderse por falta de pago</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Seguros Médicos</h3>
-              <ul className="list-disc pl-6 mb-8 text-gray-700 space-y-2">
-                <li>Verificamos la cobertura de seguro pero no garantizamos el pago</li>
-                <li>El paciente es responsable de todos los servicios no cubiertos</li>
-                <li>Los copagos y deducibles son responsabilidad del paciente</li>
               </ul>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-6">7. Alta y Terminación del Tratamiento</h2>

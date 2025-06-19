@@ -189,7 +189,7 @@ export function CTAOptimized({
                 variant="secondary"
                 className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
               >
-                <config.icon className="mr-2 h-5 w-5" />
+                <config.icon className="mr-2 h-5 w-5" color="#10b981" />
                 {config.primaryAction}
               </Button>
               <Button

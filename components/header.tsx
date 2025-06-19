@@ -8,6 +8,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, MessageCircle, Mail, Facebook, Twitter, MapPin } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -46,11 +48,14 @@ export function Header() {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <a href="#" className="hover:text-emerald-200 transition-colors">
+              <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="#" className="hover:text-emerald-200 transition-colors">
-                <Twitter className="h-4 w-4" />
+              <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
+                <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" style={{ color: '#fff' }} />
               </a>
             </div>
           </div>
