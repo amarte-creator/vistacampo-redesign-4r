@@ -17,7 +17,7 @@ export function Footer() {
               <div className="text-2xl font-bold text-emerald-400">Vistacampo</div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Centro especializado en rehabilitación de adicciones en Caracas, Venezuela. Tu recuperación es nuestra
+              Centro especializado en rehabilitación de adicciones en Colonia Tovar, Venezuela. Tu recuperación es nuestra
               misión.
             </p>
             <div className="flex space-x-4">
@@ -93,7 +93,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-emerald-400" />
-                <span className="text-gray-300">Caracas, Venezuela</span>
+                <span className="text-gray-300">Colonia Tovar, Venezuela</span>
               </div>
             </div>
             <div className="pt-4">

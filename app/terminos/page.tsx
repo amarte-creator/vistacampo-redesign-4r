@@ -262,10 +262,20 @@ export default function TerminosPage() {
                 <li>Primero debe contactar a nuestro departamento de atención al paciente</li>
                 <li>Si no se resuelve, puede solicitar mediación</li>
                 <li>Las disputas legales se resolverán bajo las leyes de Venezuela</li>
-                <li>La jurisdicción será los tribunales de Caracas, Venezuela</li>
+                <li>La jurisdicción será los tribunales de Colonia Tovar, Venezuela</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Modificaciones</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Ley Aplicable y Jurisdicción</h2>
+              <p className="text-gray-700 mb-4">
+                Estos términos se rigen por las leyes de Venezuela. Cualquier disputa se someterá a la jurisdicción de
+                los tribunales competentes.
+              </p>
+              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li>La ley aplicable es la de la República Bolivariana de Venezuela</li>
+                <li>La jurisdicción será los tribunales de Colonia Tovar, Venezuela</li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">11. Modificaciones</h2>
 
               <p className="text-gray-700 mb-8">
                 Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en
@@ -273,7 +283,7 @@ export default function TerminosPage() {
                 revisar periódicamente estos términos.
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">11. Contacto</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">12. Contacto</h2>
 
               <div className="bg-emerald-50 p-6 rounded-lg mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Departamento Legal - Vistacampo</h3>

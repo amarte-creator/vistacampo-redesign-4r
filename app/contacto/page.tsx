@@ -138,7 +138,7 @@ export default function ContactoPage() {
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-2">Ubicación</h3>
                           <p className="text-gray-600 mb-2">Centro de Rehabilitación Residencial</p>
-                          <p className="text-purple-600 font-semibold">Caracas, Venezuela</p>
+                          <p className="text-purple-600 font-semibold">Colonia Tovar, Venezuela</p>
                           <p className="text-sm text-gray-500 mt-1">
                             Ubicación exacta proporcionada durante el proceso de admisión
                           </p>
@@ -184,7 +184,7 @@ export default function ContactoPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestra Ubicación</h2>
               <p className="text-lg text-gray-700">
-                Ubicados en un entorno tranquilo y privado en Caracas, Venezuela, nuestras instalaciones están diseñadas
+                Ubicados en un entorno tranquilo y privado en la Colonia Tovar, Venezuela, nuestras instalaciones están diseñadas
                 para brindar la máxima comodidad y privacidad.
               </p>
             </div>
@@ -199,7 +199,7 @@ export default function ContactoPage() {
                         <MapPin className="h-5 w-5 text-emerald-600 mt-1" />
                         <div>
                           <p className="font-medium text-gray-900">Dirección</p>
-                          <p className="text-gray-600">Caracas, Venezuela</p>
+                          <p className="text-gray-600">Colonia Tovar, Venezuela</p>
                           <p className="text-sm text-gray-500 mt-1">
                             La dirección exacta se proporciona durante el proceso de admisión para garantizar la
                             privacidad de nuestros pacientes.
@@ -210,7 +210,7 @@ export default function ContactoPage() {
                         <Clock className="h-5 w-5 text-emerald-600 mt-1" />
                         <div>
                           <p className="font-medium text-gray-900">Acceso</p>
-                          <p className="text-gray-600">Fácil acceso desde cualquier punto de Caracas</p>
+                          <p className="text-gray-600">Fácil acceso desde cualquier punto de la Colonia Tovar</p>
                           <p className="text-sm text-gray-500 mt-1">
                             Contamos con servicio de transporte especializado para el traslado seguro de pacientes.
                           </p>

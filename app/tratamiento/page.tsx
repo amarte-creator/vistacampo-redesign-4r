@@ -12,8 +12,8 @@ import { WHATSAPP_LINK } from "@/lib/constants"
 export const metadata: Metadata = {
   title: "Tratamiento de Adicciones - Programas Terapéuticos | Vistacampo",
   description:
-    "Conoce nuestros programas de tratamiento integral para adicciones. Desintoxicación médica, terapia individual y grupal, seguimiento post-tratamiento en Caracas, Venezuela.",
-  keywords: "tratamiento adicciones, desintoxicación, terapia, rehabilitación, Caracas, Venezuela",
+    "Conoce nuestros programas de tratamiento integral para adicciones. Desintoxicación médica, terapia individual y grupal, seguimiento post-tratamiento en Colonia Tovar, Venezuela.",
+  keywords: "tratamiento adicciones, desintoxicación, terapia, rehabilitación, Colonia Tovar, Venezuela",
 }
 
 export default function TratamientoPage() {

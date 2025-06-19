@@ -120,7 +120,7 @@ export default async function NoticiasPage() {
               {posts.map((post) => (
                 <Card key={post.slug} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                   {post.image && (
-                    <div className="relative h-48">
+                  <div className="relative h-48">
                       <Image src={post.image} alt={post.title} fill className="object-cover" />
                     </div>
                   )}
@@ -132,7 +132,7 @@ export default async function NoticiasPage() {
                   <CardContent className="pt-0">
                     <CardDescription className="text-gray-600 mb-4 line-clamp-3">{post.description}</CardDescription>
                     <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
-                      <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1">
                         <Calendar className="h-3 w-3" />
                         <span>{new Date(post.date).toLocaleDateString('es-ES')}</span>
                       </div>

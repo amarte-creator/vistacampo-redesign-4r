@@ -21,8 +21,8 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Nuestro Equipo Médico - Especialistas en Adicciones | Vistacampo",
   description:
-    "Conoce a nuestro equipo de médicos, psicólogos y terapeutas especializados en tratamiento de adicciones. Profesionales con amplia experiencia en Caracas, Venezuela.",
-  keywords: "equipo médico, psicólogos, terapeutas, especialistas adicciones, Caracas, Venezuela",
+    "Conoce a nuestro equipo de médicos, psicólogos y terapeutas especializados en tratamiento de adicciones. Profesionales con amplia experiencia en Colonia Tovar, Venezuela.",
+  keywords: "equipo médico, psicólogos, terapeutas, especialistas adicciones, Colonia Tovar, Venezuela",
 }
 
 const equipoData = {

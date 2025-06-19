@@ -26,7 +26,7 @@ export default function HomePage() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               En Vistacampo ofrecemos tratamiento integral para adicciones en un ambiente seguro, privado y profesional
-              en Caracas, Venezuela.
+              en Colonia Tovar, Venezuela.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -82,7 +82,7 @@ export default function HomePage() {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   El Centro Vistacampo es una institución residencial privada, pionera en la desintoxicación y
                   tratamiento de adicciones a sustancias como el alcohol, cocaína, marihuana, tabaco, cigarrillos
-                  electrónicos, pastillas de prescripción, drogas de diseño, y comida emocional.
+                  electrónicos, pastillas de prescripción, drogas de diseño, y comida emocional, ubicada en la Colonia Tovar.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Además, tratamos conductas adictivas como la ludopatía, videojuegos, celulares, redes sociales,

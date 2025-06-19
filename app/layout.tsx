@@ -9,19 +9,19 @@ import { Footer } from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vistacampo - Centro de Rehabilitación de Adicciones en Caracas",
+  title: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
   icons: {
     icon: "/vistacampo-favicon.png",
   },
   description:
-    "Centro especializado en tratamiento de adicciones en Caracas, Venezuela. Ofrecemos desintoxicación médica, terapia individual y grupal en un ambiente seguro y confidencial.",
+    "Centro especializado en tratamiento de adicciones en Colonia Tovar, Venezuela. Ofrecemos desintoxicación médica, terapia individual y grupal en un ambiente seguro y confidencial.",
   keywords:
-    "rehabilitación, adicciones, desintoxicación, Caracas, Venezuela, tratamiento, terapia, centro de rehabilitación",
+    "rehabilitación, adicciones, desintoxicación, Colonia Tovar, Venezuela, tratamiento, terapia, centro de rehabilitación",
   authors: [{ name: "Vistacampo" }],
   openGraph: {
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
     description:
-      "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Caracas, Venezuela.",
+      "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Colonia Tovar, Venezuela.",
     url: "https://vistacampo.com",
     siteName: "Vistacampo",
     locale: "es_VE",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
     description:
-      "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Caracas, Venezuela.",
+      "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Colonia Tovar, Venezuela.",
   },
   robots: {
     index: true,

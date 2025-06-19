@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, MessageCircle, Mail, Facebook, Twitter, MapPin } from "lucide-react"
+import { Menu, MessageCircle, Mail, Facebook, Instagram, MapPin } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -26,7 +26,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
-      {/* Top Bar */}
+      
+      {/*
       <div className="bg-emerald-700 text-white py-2 text-sm">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center gap-2">
@@ -44,7 +45,7 @@ export function Header() {
               </a>
               <div className="flex items-center gap-1">
                 <MapPin className="h-3 w-3" />
-                <span>Caracas, Venezuela</span>
+                <span>Colonia Tovar, Venezuela</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -52,7 +53,7 @@ export function Header() {
                 <Facebook className="h-4 w-4" />
               </a>
               <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                <Instagram className="h-4 w-4" />
               </a>
               <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
                 <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" style={{ color: '#fff' }} />
@@ -61,10 +62,11 @@ export function Header() {
           </div>
         </div>
       </div>
+      */}
 
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="relative flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo-vistacampo.png"
@@ -77,7 +79,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center gap-x-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -89,30 +91,39 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <Button className="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                 <WhatsAppIcon className="mr-2 h-4 w-4" />
                 Solicita Ayuda
               </Button>
+              <Button size="icon" className="sm:hidden rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg">
+                <WhatsAppIcon className="h-5 w-5" />
+              </Button>
             </a>
+
+            {/* Social Icons */}
+            <div className="flex items-center space-x-3 sm:space-x-4">
+               <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
+              </a>
+              <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
+              </a>
+              <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                <FontAwesomeIcon icon={faYoutube} className="h-4 w-4 sm:h-5 sm:w-5" />
+              </a>
+            </div>
 
             {/* Mobile Navigation */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild className="lg:hidden">
+              <SheetTrigger asChild className="xl:hidden">
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-8">
-                  <Image
-                    src="/images/logo-vistacampo.png"
-                    alt="Vistacampo"
-                    width={150}
-                    height={45}
-                    className="h-10 w-auto mb-6"
-                  />
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
@@ -124,7 +135,7 @@ export function Header() {
                     </Link>
                   ))}
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                    <Button className="mt-4 bg-emerald-600 hover:bg-emerald-700">
+                    <Button className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700">
                       <WhatsAppIcon className="mr-2 h-4 w-4" />
                       Solicita Ayuda
                     </Button>
