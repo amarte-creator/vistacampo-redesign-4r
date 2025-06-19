@@ -140,6 +140,7 @@ body {
   @apply mb-6 text-gray-700;
   line-height: 1.8;
   font-size: 1.1rem;
+  text-align: justify;
 }
 
 .blog-content ul {
@@ -291,4 +292,25 @@ body {
     @apply text-base;
     line-height: 1.6;
   }
+}
+
+/* Justificación por defecto para párrafos */
+p {
+  text-align: justify;
+}
+
+/* Excluir justificación para textos cortos */
+.hero p,
+section[class*="py-20"] > div > div > p,
+.text-center p,
+.text-balance {
+  text-align: center;
+}
+
+/* Mantener la justificación específica del blog */
+.blog-content p {
+  @apply mb-6 text-gray-700;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
 }
