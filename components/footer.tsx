@@ -28,7 +28,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors">
-                <FontAwesomeIcon icon={faYoutube} className="h-5 w-5" style={{ color: '#fff' }} />
+                <FontAwesomeIcon icon={faYoutube} className="h-5 w-5" />
               </a>
             </div>
           </div>
