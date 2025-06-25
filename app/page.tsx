@@ -8,6 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
+import { TypingText } from "@/components/TypingText"
 
 export default function HomePage() {
   return (
