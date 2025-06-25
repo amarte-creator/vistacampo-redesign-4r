@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
+import { Analytics } from "@vercel/analytics/next"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
