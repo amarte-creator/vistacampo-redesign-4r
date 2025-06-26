@@ -48,7 +48,7 @@ const instalacionesData = {
       id: 2,
       titulo: "Habitación Compartida",
       descripcion: "Ambientes que fomentan la compañía y el apoyo mutuo entre pacientes.",
-      imagen: "/placeholder.svg?height=400&width=600",
+      imagen: "/images/Dos camas.jpg",
       caracteristicas: [
         "2 camas individuales",
         "Baño compartido",
