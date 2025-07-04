@@ -40,10 +40,10 @@ export default function ContactoPage() {
       <section className="relative py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 text-emerald-700 bg-emerald-100">
+            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Contacto
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Estamos Aquí para Ayudarte</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Estamos Aquí para Ayudarte</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Nuestro equipo está disponible 24/7 para brindarte la orientación y el apoyo que necesitas. Da el primer
               paso hacia tu recuperación.

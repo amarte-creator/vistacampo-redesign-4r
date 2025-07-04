@@ -19,10 +19,10 @@ export default function TerminosPage() {
       <section className="relative py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 text-emerald-700 bg-emerald-100">
+            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Términos y Condiciones
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Términos de Uso de Servicios</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Términos de Uso de Servicios</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Estos términos establecen las condiciones bajo las cuales proporcionamos nuestros servicios de tratamiento
               y el uso de nuestro sitio web.

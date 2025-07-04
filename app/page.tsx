@@ -18,12 +18,12 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/20 to-teal-900/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="secondary" className="mb-4 text-emerald-700 bg-emerald-100">
+            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Centro de Rehabilitación Especializado
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-              <span className="hero-title-gradient">Tu Recuperación es Nuestra</span>{" "}
-              <span className="hero-mission-text">Misión</span>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <span className="hero-title-gradient">Tu recuperación es nuestra</span>{" "}
+              <span className="text-rose-900">Misión</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               En Vistacampo ofrecemos tratamiento integral para adicciones en un ambiente seguro, privado y profesional
@@ -43,10 +43,10 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="border-rose-900 text-rose-900 hover:bg-rose-900/10 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Conoce Nuestro Tratamiento
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5 text-rose-900" />
                 </Button>
               </Link>
             </div>
@@ -74,10 +74,10 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <Badge variant="outline" className="text-emerald-600 border-emerald-600">
+                <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
                   Sobre Vistacampo
                 </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <h2 className="text-3xl md:text-4xl font-bold text-rose-900">
                   Pioneros en Tratamiento de Adicciones en Venezuela
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -126,7 +126,7 @@ export default function HomePage() {
               </div>
               <div className="relative">
                 <Image
-                  src="/images/vistacampo-vista-aerea.jpg"
+                  src="/images/vc-instalaciones.jpeg"
                   alt="Instalaciones de Vistacampo - Centro de rehabilitación en ambiente natural"
                   width={600}
                   height={500}
@@ -154,10 +154,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
+              <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
                 Mensaje del Fundador
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-rose-900 mb-4">
                 Una Historia de Recuperación y Esperanza
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -186,7 +186,7 @@ export default function HomePage() {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-emerald-50 p-8 rounded-2xl border-l-4 border-emerald-600">
+                <div className="bg-rose-900/5 p-8 rounded-2xl border-l-4 border-rose-900">
                   <div className="prose prose-lg max-w-none">
                     <p className="text-gray-700 leading-relaxed mb-4">
                       En septiembre del año 2001, tomé la difícil y forzosa decisión de apartarme de la familia y de mi
@@ -487,12 +487,12 @@ export default function HomePage() {
                 ver a tus familiares y amigos sufrir como consecuencia de tu incontrolable consumo; entonces, cuenta con
                 nosotros.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="secondary"
-                    className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
+                    className="w-full sm:w-auto bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
                     <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                     Contactar por WhatsApp
@@ -527,70 +527,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <style jsx>{`
-        .hero-title-gradient {
-          background: linear-gradient(135deg, #059669 0%, #0d9488 50%, #0891b2 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-size: 200% 200%;
-          animation: gradientShift 4s ease-in-out infinite;
-          position: relative;
-        }
-
-        .hero-mission-text {
-          background: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #d97706 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-size: 200% 200%;
-          animation: gradientShift 4s ease-in-out infinite reverse;
-          position: relative;
-        }
-
-        .hero-mission-text::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #d97706 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: pulse 2s ease-in-out infinite;
-          z-index: -1;
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.7;
-            transform: scale(1.05);
-          }
-        }
-
-        @keyframes gradientShift {
-          0%, 100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .hero-title-gradient,
-          .hero-mission-text {
-            background-size: 150% 150%;
-          }
-        }
-      `}</style>
     </div>
   )
 }

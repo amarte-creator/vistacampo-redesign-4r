@@ -96,10 +96,10 @@ export default function AdmisionClientPage() {
       <section className="relative py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 text-emerald-700 bg-emerald-100">
+            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Proceso de Admisión
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Inicia tu Proceso de Recuperación</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Inicia tu Proceso de Recuperación</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Nuestro proceso de admisión está diseñado para ser simple, confidencial y personalizado. Te guiaremos en
               cada paso para asegurar que recibas el tratamiento más adecuado para tu situación.

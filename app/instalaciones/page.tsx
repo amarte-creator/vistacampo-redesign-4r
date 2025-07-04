@@ -70,7 +70,7 @@ const instalacionesData = {
       id: 4,
       titulo: "Sala de Terapia Grupal",
       descripcion: "Espacios acogedores diseñados para facilitar la comunicación y el trabajo en equipo.",
-      imagen: "/placeholder.svg?height=400&width=600",
+      imagen: "/images/vc-terapia.jpeg",
       caracteristicas: [
         "Círculo de asientos",
         "Iluminación natural",
@@ -96,7 +96,7 @@ const instalacionesData = {
       id: 6,
       titulo: "Comedor Principal",
       descripcion: "Espacio amplio y luminoso donde se comparten las comidas en un ambiente familiar.",
-      imagen: "/placeholder.svg?height=400&width=600",
+      imagen: "/images/vc-comedor.jpeg",
       caracteristicas: [
         "Capacidad 40 personas",
         "Cocina abierta",
@@ -165,7 +165,7 @@ export default function InstalacionesPage() {
       <section className="relative py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 text-emerald-700 bg-emerald-100">
+            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Nuestras Instalaciones
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Un Hogar para tu Recuperación</h1>
@@ -196,10 +196,10 @@ export default function InstalacionesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
+              <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
                 Galería de Instalaciones
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-rose-900 mb-4">
                 Espacios Diseñados para tu Bienestar
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -413,10 +413,10 @@ export default function InstalacionesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
+              <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
                 Servicios y Comodidades
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-rose-900 mb-4">
                 Todo lo que Necesitas para tu Bienestar
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -520,10 +520,10 @@ export default function InstalacionesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <Badge variant="outline" className="text-emerald-600 border-emerald-600">
+                <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
                   Ambiente Terapéutico
                 </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                <h2 className="text-3xl md:text-4xl font-bold text-rose-900">
                   Diseñado para la Sanación y el Crecimiento
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
