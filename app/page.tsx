@@ -18,7 +18,7 @@ export default function HomePage() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/vc-panoramica.jpeg"
+            src="/images/vc-panoramica.png"
             alt="Vista panorámica de Vistacampo"
             fill
             priority
@@ -27,7 +27,7 @@ export default function HomePage() {
           />
         </div>
         {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 to-teal-900/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent z-10" />
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-4xl mx-auto text-center space-y-8 text-white">
             <Badge variant="secondary" className="mb-4 text-rose-100 bg-rose-900/40">
