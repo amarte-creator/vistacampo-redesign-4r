@@ -327,7 +327,7 @@ export default function HomePage() {
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="h-8 w-8 text-blue-600" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Terapia Grupal</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">Terapia grupal</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-gray-600 leading-relaxed">
@@ -341,7 +341,7 @@ export default function HomePage() {
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Heart className="h-8 w-8 text-purple-600" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Terapia Individual</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">Terapia individual</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-gray-600 leading-relaxed">
@@ -355,7 +355,7 @@ export default function HomePage() {
                   <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="h-8 w-8 text-orange-600" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Terapia Familiar</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">Terapia familiar</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-gray-600 leading-relaxed">
@@ -369,7 +369,7 @@ export default function HomePage() {
                   <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-teal-600" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Seguimiento Post-Tratamiento</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">Seguimiento post-tratamiento</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-gray-600 leading-relaxed">
@@ -383,7 +383,7 @@ export default function HomePage() {
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Heart className="h-8 w-8 text-green-600" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Terapias Complementarias</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">Terapias complementarias</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-gray-600 leading-relaxed">
@@ -492,7 +492,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para Dar el Primer Paso?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para dar el primer paso?</h2>
               <p className="text-xl mb-8 opacity-90">
                 Si sientes que has pisado fondo y que llegó el momento de tomar la decisión de hacer un alto para
                 recuperar tu vida y liberarte de la terrible dependencia al alcohol y otras drogas; si no soportas más
@@ -516,7 +516,7 @@ export default function HomePage() {
                     variant="outline"
                     className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
-                    Más Información
+                    Más información
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -528,7 +528,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Heart className="h-4 w-4" />
-                  <span>Atención Personalizada</span>
+                  <span>Atención personalizada</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <WhatsAppIcon className="h-4 w-4" color="#10b981" />
