@@ -14,18 +14,30 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* 1. Centro de Rehabilitación Especializado - Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/20 to-teal-900/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Centro de Rehabilitación Especializado
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50 overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/vc-panoramica.jpeg"
+            alt="Vista panorámica de Vistacampo"
+            fill
+            priority
+            className="object-cover w-full h-full "
+            style={{ zIndex: 0 }}
+          />
+        </div>
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 to-teal-900/60 z-10" />
+        <div className="container mx-auto px-4 relative z-20">
+          <div className="max-w-4xl mx-auto text-center space-y-8 text-white">
+            <Badge variant="secondary" className="mb-4 text-rose-100 bg-rose-900/40">
+              Centro de rehabilitación especializado
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              <span className="hero-title-gradient">Tu recuperación es nuestra</span>{" "}
-              <span className="text-rose-900">misión</span>
+              <span className="bg-gradient-to-r from-emerald-200 via-teal-100 to-blue-200 bg-clip-text text-transparent drop-shadow-lg">Tu recuperación es nuestra</span>{" "}
+              <span className="text-rose-200 drop-shadow-lg">misión</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
               En Vistacampo ofrecemos tratamiento integral para adicciones en un ambiente seguro, privado y profesional
               en Colonia Tovar, Venezuela.
             </p>
@@ -36,21 +48,21 @@ export default function HomePage() {
                   className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
-                  Solicita Ayuda Ahora
+                  Solicita ayuda ahora
                 </Button>
               </a>
               <Link href="/tratamiento">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-rose-900 text-rose-900 hover:bg-rose-900/10 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="border-rose-900 text-rose-900 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:text-rose-900 focus:text-rose-900"
                 >
-                  Conoce Nuestro Tratamiento
+                  Conoce nuestro tratamiento
                   <ArrowRight className="ml-2 h-5 w-5 text-rose-900" />
                 </Button>
               </Link>
             </div>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600 mt-8">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-white mt-8">
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-emerald-600" />
                 <span>100% Confidencial</span>
@@ -155,10 +167,10 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
-                Mensaje del Fundador
+                Mensaje del fundador
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-rose-900 mb-4">
-                Una Historia de Recuperación y Esperanza
+                Una historia de recuperación y esperanza
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Conoce la historia personal que inspiró la creación de Vistacampo y nuestro compromiso con tu
@@ -284,10 +296,10 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Nuestros Servicios
+                Nuestros servicios
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Tratamiento Especializado y Personalizado
+                Tratamiento especializado y personalizado
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Ofrecemos un enfoque integral que combina medicina, psicología y terapias especializadas para garantizar
@@ -301,7 +313,7 @@ export default function HomePage() {
                   <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Shield className="h-8 w-8 text-emerald-600" />
                   </div>
-                  <CardTitle className="text-xl text-gray-900">Desintoxicación Médica</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">Desintoxicación médica</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center text-gray-600 leading-relaxed">
@@ -393,7 +405,7 @@ export default function HomePage() {
                 Testimonios
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Historias de Recuperación y Esperanza
+                Historias de recuperación y esperanza
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Las experiencias de nuestros pacientes y sus familias son nuestro mayor testimonio del compromiso y la
