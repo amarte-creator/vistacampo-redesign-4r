@@ -175,15 +175,15 @@ export default function InstalacionesPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-emerald-600" />
-                <span>Ambiente Seguro</span>
+                <span>Ambiente seguro</span>
               </div>
               <div className="flex items-center gap-2">
                 <TreePine className="h-4 w-4 text-emerald-600" />
-                <span>Entorno Natural</span>
+                <span>Entorno natural</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="h-4 w-4 text-emerald-600" />
-                <span>Diseño Terapéutico</span>
+                <span>Diseño terapéutico</span>
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function InstalacionesPage() {
                 </TabsTrigger>
                 <TabsTrigger value="zonas-comunes" className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  Zonas Comunes
+                  Zonas comunes
                 </TabsTrigger>
                 <TabsTrigger value="exteriores" className="flex items-center gap-2">
                   <TreePine className="h-4 w-4" />
@@ -250,7 +250,7 @@ export default function InstalacionesPage() {
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-4xl">
-                            <DialogTitle className="sr-only">{habitacion.titulo}</DialogTitle>
+                            <DialogTitle className="sr-only">{habitacion.titulo.charAt(0).toUpperCase() + habitacion.titulo.slice(1).toLowerCase()}</DialogTitle>
                             <Image
                               src={habitacion.imagen || "/placeholder.svg"}
                               alt={habitacion.titulo}
@@ -262,7 +262,7 @@ export default function InstalacionesPage() {
                         </Dialog>
                       </div>
                       <CardHeader>
-                        <CardTitle className="text-xl text-gray-900">{habitacion.titulo}</CardTitle>
+                        <CardTitle className="text-xl text-gray-900">{habitacion.titulo.charAt(0).toUpperCase() + habitacion.titulo.slice(1).toLowerCase()}</CardTitle>
                         <CardDescription className="text-gray-600">{habitacion.descripcion}</CardDescription>
                       </CardHeader>
                       <CardContent>
@@ -310,7 +310,7 @@ export default function InstalacionesPage() {
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-4xl">
-                            <DialogTitle className="sr-only">{zona.titulo}</DialogTitle>
+                            <DialogTitle className="sr-only">{zona.titulo.charAt(0).toUpperCase() + zona.titulo.slice(1).toLowerCase()}</DialogTitle>
                             <Image
                               src={zona.imagen || "/placeholder.svg"}
                               alt={zona.titulo}
@@ -322,7 +322,7 @@ export default function InstalacionesPage() {
                         </Dialog>
                       </div>
                       <CardHeader>
-                        <CardTitle className="text-xl text-gray-900">{zona.titulo}</CardTitle>
+                        <CardTitle className="text-xl text-gray-900">{zona.titulo.charAt(0).toUpperCase() + zona.titulo.slice(1).toLowerCase()}</CardTitle>
                         <CardDescription className="text-gray-600">{zona.descripcion}</CardDescription>
                       </CardHeader>
                       <CardContent>
@@ -370,7 +370,7 @@ export default function InstalacionesPage() {
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-4xl">
-                            <DialogTitle className="sr-only">{exterior.titulo}</DialogTitle>
+                            <DialogTitle className="sr-only">{exterior.titulo.charAt(0).toUpperCase() + exterior.titulo.slice(1).toLowerCase()}</DialogTitle>
                             <Image
                               src={exterior.imagen || "/placeholder.svg"}
                               alt={exterior.titulo}
@@ -382,7 +382,7 @@ export default function InstalacionesPage() {
                         </Dialog>
                       </div>
                       <CardHeader>
-                        <CardTitle className="text-xl text-gray-900">{exterior.titulo}</CardTitle>
+                        <CardTitle className="text-xl text-gray-900">{exterior.titulo.charAt(0).toUpperCase() + exterior.titulo.slice(1).toLowerCase()}</CardTitle>
                         <CardDescription className="text-gray-600">{exterior.descripcion}</CardDescription>
                       </CardHeader>
                       <CardContent>

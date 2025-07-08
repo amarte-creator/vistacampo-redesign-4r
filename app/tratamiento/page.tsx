@@ -34,7 +34,7 @@ export default function TratamientoPage() {
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
                 <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
-                Consulta Gratuita
+                Consulta gratuita
               </Button>
             </a>
           </div>
@@ -599,7 +599,7 @@ export default function TratamientoPage() {
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
                   <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
-                  Consulta Gratuita
+                  Consulta gratuita
                 </Button>
               </a>
               <Link href="/admision">
@@ -607,7 +607,7 @@ export default function TratamientoPage() {
                   size="lg"
                   variant="outline"
                   className="bg-white text-emerald-600 hover:bg-gray-100">
-                  Proceso de Admisión
+                  Proceso de admisión
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>

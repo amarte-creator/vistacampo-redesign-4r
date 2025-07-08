@@ -48,7 +48,8 @@ export default function HomePage() {
                   className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
-                  Solicita ayuda ahora
+                  <span className="block sm:hidden">Solicita ayuda</span>
+                  <span className="hidden sm:inline">Solicita ayuda ahora</span>
                 </Button>
               </a>
               <Link href="/tratamiento">
@@ -271,7 +272,7 @@ export default function HomePage() {
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
                     <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 w-full">
                       <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
-                      Contacta con Nosotros
+                      Contacta con nosotros
                     </Button>
                   </a>
                   <Link href="/contacto" className="flex-1">
@@ -279,7 +280,7 @@ export default function HomePage() {
                       variant="outline"
                       className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 shadow-lg hover:shadow-xl transition-all duration-300 w-full"
                     >
-                      Más Información
+                      Más información
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
