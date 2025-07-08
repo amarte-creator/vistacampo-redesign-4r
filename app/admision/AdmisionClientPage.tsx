@@ -107,15 +107,15 @@ export default function AdmisionClientPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-emerald-600" />
-                <span>100% Confidencial</span>
+                <span>100% confidencial</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-emerald-600" />
-                <span>Proceso Rápido</span>
+                <span>Proceso rápido</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="h-4 w-4 text-emerald-600" />
-                <span>Atención Personalizada</span>
+                <span>Atención personalizada</span>
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function AdmisionClientPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Proceso de Admisión
+                Proceso de admisión
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">4 pasos simples para comenzar</h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -219,7 +219,7 @@ export default function AdmisionClientPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Información Importante
+                Información importante
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Preguntas frecuentes sobre admisión</h2>
             </div>

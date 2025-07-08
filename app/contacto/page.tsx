@@ -51,11 +51,11 @@ export default function ContactoPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-emerald-600" />
-                <span>Consulta Confidencial</span>
+                <span>Consulta confidencial</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="h-4 w-4 text-emerald-600" />
-                <span>Atención Inmediata</span>
+                <span>Atención inmediata</span>
               </div>
               <div className="flex items-center gap-2">
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
