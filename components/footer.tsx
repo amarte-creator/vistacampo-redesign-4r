@@ -35,7 +35,7 @@ export function Footer() {
 
           {/* Enlaces Rápidos */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-emerald-400">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-semibold text-emerald-400">Enlaces rápidos</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/tratamiento" className="text-gray-300 hover:text-white transition-colors">
@@ -49,7 +49,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/equipo" className="text-gray-300 hover:text-white transition-colors">
-                  Nuestro Equipo
+                  Nuestro equipo
                 </Link>
               </li>
               <li>
@@ -69,11 +69,11 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-emerald-400">Servicios</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">Desintoxicación Médica</li>
-              <li className="text-gray-300">Terapia Individual</li>
-              <li className="text-gray-300">Terapia Grupal</li>
-              <li className="text-gray-300">Terapia Familiar</li>
-              <li className="text-gray-300">Seguimiento Post-Tratamiento</li>
+              <li className="text-gray-300">Desintoxicación médica</li>
+              <li className="text-gray-300">Terapia individual</li>
+              <li className="text-gray-300">Terapia grupal</li>
+              <li className="text-gray-300">Terapia familiar</li>
+              <li className="text-gray-300">Seguimiento post-tratamiento</li>
             </ul>
           </div>
 
@@ -100,7 +100,7 @@ export function Footer() {
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
                   <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
-                  Solicita Ayuda 24/7
+                  Solicita ayuda 24/7
                 </Button>
               </a>
             </div>

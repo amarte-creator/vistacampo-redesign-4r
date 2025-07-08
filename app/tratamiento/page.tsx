@@ -24,9 +24,9 @@ export default function TratamientoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Programas Terapéuticos
+              Programas terapéuticos
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Tratamiento Integral y Personalizado</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Tratamiento integral y personalizado</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Nuestro enfoque médico y psicológico especializado te acompañará en cada etapa de tu proceso de
               recuperación, desde la desintoxicación hasta el seguimiento a largo plazo.
@@ -48,10 +48,10 @@ export default function TratamientoPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="text-emerald-600 border-emerald-600">
-                  Nuestro Enfoque
+                  Nuestro enfoque
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                  Combinamos Medicina y Psicología Especializada
+                  Combinamos medicina y psicología especializada
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Nuestro tratamiento integra la atención médica especializada con terapias psicológicas avanzadas,
@@ -85,7 +85,7 @@ export default function TratamientoPage() {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src="/images/vc-terapia-2.jpeg"
                   alt="Equipo médico de Vistacampo realizando evaluación integral"
                   width={600}
                   height={500}
@@ -103,9 +103,9 @@ export default function TratamientoPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Nuestros Objetivos
+                Nuestros objetivos
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Objetivos del Tratamiento</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Objetivos del tratamiento</h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Nuestro programa terapéutico está diseñado para lograr una recuperación integral y sostenible, 
                 abordando todos los aspectos de la adicción y sus consecuencias.
@@ -118,7 +118,7 @@ export default function TratamientoPage() {
                   <div className="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                     <span className="text-emerald-600 font-bold text-xl">1</span>
                   </div>
-                  <CardTitle className="text-xl">Diagnóstico Integral</CardTitle>
+                  <CardTitle className="text-xl">Diagnóstico integral</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
@@ -133,7 +133,7 @@ export default function TratamientoPage() {
                   <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                     <span className="text-blue-600 font-bold text-xl">2</span>
                   </div>
-                  <CardTitle className="text-xl">Estrategias Terapéuticas</CardTitle>
+                  <CardTitle className="text-xl">Estrategias terapéuticas</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
@@ -148,7 +148,7 @@ export default function TratamientoPage() {
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                     <span className="text-purple-600 font-bold text-xl">3</span>
                   </div>
-                  <CardTitle className="text-xl">Reinserción Integral</CardTitle>
+                  <CardTitle className="text-xl">Reinserción integral</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
@@ -163,7 +163,7 @@ export default function TratamientoPage() {
                   <div className="bg-teal-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                     <span className="text-teal-600 font-bold text-xl">4</span>
                   </div>
-                  <CardTitle className="text-xl">Apoyo Familiar</CardTitle>
+                  <CardTitle className="text-xl">Apoyo familiar</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
@@ -183,9 +183,9 @@ export default function TratamientoPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Proceso Estructurado
+                Proceso estructurado
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fases del Tratamiento</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fases del tratamiento</h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 La duración del ingreso dependerá de la evolución y adaptación del paciente. A título orientativo, 
                 la mayoría de los pacientes completan un programa de 16 a 20 semanas, cumpliendo las 4 fases fundamentales.
@@ -232,7 +232,7 @@ export default function TratamientoPage() {
                 </div>
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src="/images/vc-comida.jpeg"
                     alt="Proceso de desintoxicación médica supervisada"
                     width={500}
                     height={400}
@@ -245,7 +245,7 @@ export default function TratamientoPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="relative lg:order-2">
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src="/images/vc-desayuno.jpeg"
                     alt="Proceso de deshabituación y cambio de hábitos"
                     width={500}
                     height={400}
@@ -395,9 +395,9 @@ export default function TratamientoPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Proceso de Recuperación
+                Proceso de recuperación
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Etapas del Tratamiento</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Etapas del tratamiento</h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Nuestro programa se desarrolla en etapas estructuradas que garantizan una recuperación progresiva y
                 sostenible en el tiempo.
@@ -416,7 +416,7 @@ export default function TratamientoPage() {
                   <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Shield className="h-8 w-8 text-emerald-600" />
                   </div>
-                  <CardTitle className="text-xl text-center">Desintoxicación Médica</CardTitle>
+                  <CardTitle className="text-xl text-center">Desintoxicación médica</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <CardDescription className="text-gray-600 mb-4">
@@ -446,7 +446,7 @@ export default function TratamientoPage() {
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Heart className="h-8 w-8 text-blue-600" />
                   </div>
-                  <CardTitle className="text-xl text-center">Terapia Intensiva</CardTitle>
+                  <CardTitle className="text-xl text-center">Terapia intensiva</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <CardDescription className="text-gray-600 mb-4">
@@ -477,7 +477,7 @@ export default function TratamientoPage() {
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-purple-600" />
                   </div>
-                  <CardTitle className="text-xl text-center">Seguimiento Continuo</CardTitle>
+                  <CardTitle className="text-xl text-center">Seguimiento continuo</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <CardDescription className="text-gray-600 mb-4">
@@ -506,9 +506,9 @@ export default function TratamientoPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Preguntas Frecuentes
+                Preguntas frecuentes
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Resolvemos tus Dudas</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Resolvemos tus dudas</h2>
               <p className="text-lg text-gray-700">
                 Las preguntas más comunes sobre nuestro proceso de tratamiento y recuperación.
               </p>
@@ -590,7 +590,7 @@ export default function TratamientoPage() {
       <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Comienza tu Proceso de Recuperación Hoy</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Comienza tu proceso de recuperación hoy</h2>
             <p className="text-xl mb-8 opacity-90">
               Nuestro equipo especializado está listo para diseñar un plan de tratamiento personalizado que se adapte a
               tus necesidades específicas.

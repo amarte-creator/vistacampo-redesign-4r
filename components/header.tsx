@@ -95,7 +95,7 @@ export function Header() {
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <Button className="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                 <WhatsAppIcon className="mr-2 h-4 w-4" />
-                Solicita Ayuda
+                Solicita ayuda
               </Button>
               <Button size="icon" className="sm:hidden rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                 <WhatsAppIcon className="h-5 w-5" />

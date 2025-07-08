@@ -30,7 +30,7 @@ const equipoData = {
     {
       id: 1,
       nombre: "Julio González",
-      cargo: "Fundador y Director Vistacampo",
+      cargo: "Fundador y director Vistacampo",
       especialidad: "Adicciones",
       imagen: "/images/Julio-Gonzales-Fundador y Director Vistacampo.jpg",
       experiencia: "20+ años",
@@ -83,7 +83,7 @@ const equipoData = {
     {
       id: 5,
       nombre: "Alejandra Reyna",
-      cargo: "Planificación Estratégica",
+      cargo: "Planificación estratégica",
       especialidad: "Planificación Estratégica",
       imagen: "/images/Alejandra-Reyna-.png",
       experiencia: "",
@@ -96,21 +96,21 @@ const equipoData = {
   medicos: [
     {
       id: 3,
-      nombre: "Dra. Milagros",
-      cargo: "Médico Internista",
-      especialidad: "Medicina Interna",
-      imagen: "/placeholder.svg?height=400&width=400",
+      nombre: "Dra. Omaira Fehr",
+      cargo: "Médico internista",
+      especialidad: "Medicina interna",
+      imagen: "/images/omaira-fehr.jpg",
       experiencia: "12+ años",
       educacion: ["MD - Universidad de Los Andes", "Residencia en Medicina Interna - Hospital Central"],
       certificaciones: ["Especialista en Medicina Interna", "Certificado en Cuidados Intensivos"],
       descripcion:
-        "El Dr. Pérez se encarga del cuidado médico integral de nuestros pacientes, monitoreando su salud física durante todo el proceso de desintoxicación y recuperación.",
+        "La Dra. Fehr se encarga del cuidado médico integral de nuestros pacientes, monitoreando su salud física durante todo el proceso de desintoxicación y recuperación.",
       especialidades: ["Evaluación médica", "Manejo de comorbilidades", "Cuidados intensivos"],
     },
     {
       id: 4,
       nombre: "Dr. Eduardo Landaeta",
-      cargo: "Médico Psiquiatra",
+      cargo: "Médico psiquiatra",
       especialidad: "Psiquiatría",
       imagen: "/images/eduardo-landaeta.png",
       experiencia: "10+ años",
@@ -180,6 +180,18 @@ const equipoData = {
       descripcion: "",
       especialidades: [],
     },
+    {
+      id: 9,
+      nombre: "Alejandro Gonzalez",
+      cargo: "Equipo terapéutico",
+      especialidad: "Equipo terapéutico",
+      imagen: "/images/alejandro-gonzalez.png",
+      experiencia: "",
+      educacion: [],
+      certificaciones: [],
+      descripcion: "",
+      especialidades: [],
+    },
   ],
 }
 
@@ -191,11 +203,9 @@ export default function EquipoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Nuestro Equipo
+              Nuestro equipo
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">
-              Profesionales Comprometidos con tu Recuperación
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Profesionales comprometidos con tu recuperación</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Nuestro equipo multidisciplinario está formado por médicos, psicólogos y terapeutas especializados en
               adicciones, unidos por el compromiso de brindarte la mejor atención profesional y humana.
@@ -253,7 +263,7 @@ export default function EquipoPage() {
                 Conoce a Nuestros Especialistas
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Un Equipo Multidisciplinario de Excelencia
+                Un equipo multidisciplinario de excelencia
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Cada miembro de nuestro equipo aporta su experiencia y especialización para brindarte un tratamiento
@@ -451,9 +461,9 @@ export default function EquipoPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="text-emerald-600 border-emerald-600">
-                  Nuestro Enfoque
+                  Nuestro enfoque
                 </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Trabajo en Equipo para tu Recuperación</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Trabajo en equipo para tu recuperación</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Nuestro equipo multidisciplinario trabaja de manera coordinada para brindarte una atención integral.
                   Cada profesional aporta su experiencia específica, pero todos compartimos el mismo objetivo: tu
@@ -520,7 +530,9 @@ export default function EquipoPage() {
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
                 Testimonios
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Lo que Dicen Nuestros Pacientes</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Lo que dicen nuestros pacientes
+              </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 La experiencia y dedicación de nuestro equipo se refleja en las palabras de quienes han vivido el
                 proceso de recuperación con nosotros.

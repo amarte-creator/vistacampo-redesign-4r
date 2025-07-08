@@ -43,7 +43,7 @@ export default function ContactoPage() {
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Contacto
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Estamos Aquí para Ayudarte</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Estamos aquí para ayudarte</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Nuestro equipo está disponible 24/7 para brindarte la orientación y el apoyo que necesitas. Da el primer
               paso hacia tu recuperación.
@@ -76,7 +76,7 @@ export default function ContactoPage() {
               {/* Información de Contacto */}
               <div className="space-y-8 lg:col-span-2 max-w-xl mx-auto">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Información de Contacto</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Información de contacto</h2>
                   <p className="text-lg text-gray-700 mb-8">
                     Contáctanos por cualquiera de estos medios. Nuestro equipo de admisiones te brindará toda la
                     información que necesitas de manera confidencial y profesional.
@@ -93,7 +93,7 @@ export default function ContactoPage() {
                           </a>
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900 mb-2">Teléfono de Emergencia</h3>
+                          <h3 className="font-semibold text-gray-900 mb-2">Teléfono de emergencia</h3>
                           <p className="text-gray-600 mb-2">Disponible 24 horas, 7 días a la semana</p>
                           <a
                             href="tel:+584122315968"
@@ -116,7 +116,7 @@ export default function ContactoPage() {
                           <Mail className="h-6 w-6 text-blue-600" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900 mb-2">Correo Electrónico</h3>
+                          <h3 className="font-semibold text-gray-900 mb-2">Correo electrónico</h3>
                           <p className="text-gray-600 mb-2">Respuesta en menos de 2 horas</p>
                           <a
                             href="mailto:info@vistacampo.com"
@@ -154,7 +154,7 @@ export default function ContactoPage() {
                           <Clock className="h-6 w-6 text-orange-600" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-gray-900 mb-2">Horario de Atención</h3>
+                          <h3 className="font-semibold text-gray-900 mb-2">Horario de atención</h3>
                           <div className="space-y-1 text-gray-600">
                             <p>
                               <span className="font-medium">Emergencias:</span> 24/7
@@ -182,7 +182,7 @@ export default function ContactoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestra Ubicación</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestra ubicación</h2>
               <p className="text-lg text-gray-700">
                 Ubicados en un entorno tranquilo y privado en la Colonia Tovar, Venezuela, nuestras instalaciones están diseñadas
                 para brindar la máxima comodidad y privacidad.
@@ -193,7 +193,7 @@ export default function ContactoPage() {
               <div className="space-y-6">
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Información de Ubicación</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Información de ubicación</h3>
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
                         <MapPin className="h-5 w-5 text-emerald-600 mt-1" />
@@ -258,7 +258,7 @@ export default function ContactoPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas Ayuda Inmediata?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas ayuda inmediata?</h2>
               <p className="text-xl mb-8 opacity-90">
                 Si tú o un ser querido están en crisis por adicciones, no esperes. Nuestro equipo de emergencias está
                 disponible las 24 horas del día.
@@ -271,7 +271,7 @@ export default function ContactoPage() {
                     className="bg-white text-red-600 hover:bg-gray-100 text-lg px-8 py-4"
                   >
                     <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
-                    Llamada de Emergencia
+                    Llamada de emergencia
                   </Button>
                 </a>
               </div>

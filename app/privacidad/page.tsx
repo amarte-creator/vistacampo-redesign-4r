@@ -20,9 +20,9 @@ export default function PrivacidadPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Política de Privacidad
+              Política de privacidad
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Tu Privacidad es Nuestra Prioridad</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Tu privacidad es nuestra prioridad</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               En Vistacampo, protegemos tu información personal y médica con los más altos estándares de
               confidencialidad y seguridad.

@@ -97,9 +97,9 @@ export default function AdmisionClientPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Proceso de Admisión
+              Proceso de admisión
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Inicia tu Proceso de Recuperación</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Inicia tu proceso de recuperación</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Nuestro proceso de admisión está diseñado para ser simple, confidencial y personalizado. Te guiaremos en
               cada paso para asegurar que recibas el tratamiento más adecuado para tu situación.
@@ -130,7 +130,7 @@ export default function AdmisionClientPage() {
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
                 Proceso de Admisión
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">4 Pasos Simples para Comenzar</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">4 pasos simples para comenzar</h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Nuestro proceso está diseñado para ser lo más sencillo posible, respetando siempre tu privacidad y
                 brindándote el apoyo que necesitas desde el primer contacto.
@@ -148,7 +148,7 @@ export default function AdmisionClientPage() {
                   >
                     <WhatsAppIcon className="h-6 w-6" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">1. Contacto Inicial</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Contáctanos</h3>
                   <p className="text-sm text-gray-600">
                     Llámanos o completa el formulario. Evaluación inicial confidencial y sin compromiso.
                   </p>
@@ -165,7 +165,7 @@ export default function AdmisionClientPage() {
                   >
                     <FileText className="h-6 w-6" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">2. Evaluación Médica</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Evaluación inicial</h3>
                   <p className="text-sm text-gray-600">
                     Evaluación médica y psicológica completa para diseñar tu plan de tratamiento personalizado.
                   </p>
@@ -182,7 +182,7 @@ export default function AdmisionClientPage() {
                   >
                     <CreditCard className="h-6 w-6" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">3. Planificación</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Planificación</h3>
                   <p className="text-sm text-gray-600">
                     Revisión de opciones de pago y planificación del ingreso.
                   </p>
@@ -199,7 +199,7 @@ export default function AdmisionClientPage() {
                   >
                     <CheckCircle className="h-6 w-6" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">4. Ingreso</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Ingreso</h3>
                   <p className="text-sm text-gray-600">
                     Ingreso programado con acompañamiento familiar y orientación completa.
                   </p>
@@ -221,7 +221,7 @@ export default function AdmisionClientPage() {
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
                 Información Importante
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Preguntas Frecuentes sobre Admisión</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Preguntas frecuentes sobre admisión</h2>
             </div>
 
             <Accordion type="single" collapsible className="space-y-4">
@@ -288,7 +288,7 @@ export default function AdmisionClientPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas Ayuda Inmediata?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Necesitas ayuda inmediata?</h2>
               <p className="text-xl mb-8 opacity-90">
                 Nuestro equipo de admisiones está disponible 24/7 para situaciones de emergencia. No esperes, da el
                 primer paso hacia la recuperación ahora mismo.
@@ -301,7 +301,7 @@ export default function AdmisionClientPage() {
                     className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
                   >
                     <WhatsAppIcon className="mr-2 h-5 w-5" />
-                    Llamar Ahora: (+58) 412-231-5968
+                    Llamar ahora: (+58) 412-231-5968
                   </Button>
                 </a>
               </div>

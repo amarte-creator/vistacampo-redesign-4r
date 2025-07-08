@@ -59,10 +59,10 @@ export default async function NoticiasPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Blog y Noticias
+              Blog y noticias
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">
-              Información y Recursos sobre Adicciones
+              Información y recursos sobre adicciones
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Mantente informado con artículos especializados, consejos de expertos y las últimas investigaciones en el
@@ -71,15 +71,15 @@ export default async function NoticiasPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <BookOpen className="h-4 w-4 text-emerald-600" />
-                <span>Artículos Especializados</span>
+                <span>Artículos especializados</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="h-4 w-4 text-emerald-600" />
-                <span>Consejos de Expertos</span>
+                <span>Consejos de expertos</span>
               </div>
               <div className="flex items-center gap-2">
                 <Brain className="h-4 w-4 text-emerald-600" />
-                <span>Basado en Evidencia</span>
+                <span>Basado en evidencia</span>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default async function NoticiasPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Más Artículos</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Más artículos</h2>
               <p className="text-lg text-gray-700">
                 Explora nuestra colección completa de artículos sobre adicciones, salud mental y recuperación.
               </p>
@@ -176,7 +176,7 @@ export default async function NoticiasPage() {
       <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Mantente Informado</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Mantente informado</h2>
             <p className="text-xl mb-8 opacity-90">
               Suscríbete a nuestro boletín para recibir los últimos artículos, consejos de expertos y recursos sobre
               adicciones directamente en tu email.
