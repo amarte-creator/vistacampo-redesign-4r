@@ -18,14 +18,17 @@ export default function HomePage() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/vc-panoramica.png"
+            src="/images/vc-panoramica.webp"
             alt="Vista panorámica de Vistacampo"
             fill
             priority
-            className="object-cover w-full h-full "
-            style={{ zIndex: 0 }}
+            quality={70} // Reduce peso sin perder mucha calidad
+            placeholder="blur" // Carga progresiva
+            blurDataURL="/images/vc-panoramica-blur.webp" // Versión ligera
+            className="object-cover w-full h-full"
           />
         </div>
+
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent z-10" />
         <div className="container mx-auto px-4 relative z-20">

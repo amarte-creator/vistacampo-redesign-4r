@@ -61,7 +61,7 @@ const instalacionesData = {
       id: 3,
       titulo: "Suite de recuperación",
       descripcion: "Espacios especiales para pacientes en etapas avanzadas de recuperación.",
-      imagen: "/placeholder.svg?height=400&width=600",
+      imagen: "/images/vc-dos-camas.jpeg",
       caracteristicas: ["Sala de estar", "Kitchenette", "Baño completo", "Balcón privado", "Mobiliario premium"],
     },
   ],
@@ -111,7 +111,7 @@ const instalacionesData = {
       id: 7,
       titulo: "Jardines terapéuticos",
       descripcion: "Espacios verdes diseñados para la meditación, relajación y conexión con la naturaleza.",
-      imagen: "/images/vc-panoramica.jpeg",
+      imagen: "/images/vc-panoramica.webp",
       caracteristicas: [
         "Senderos naturales",
         "Áreas de meditación",

@@ -328,7 +328,7 @@ export default function TratamientoPage() {
                 </div>
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src="/images/vc-florero.jpeg"
                     alt="Proceso de rehabilitación y crecimiento personal"
                     width={500}
                     height={400}
@@ -341,7 +341,7 @@ export default function TratamientoPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="relative lg:order-2">
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src="/images/vc-sala-cala.jpeg"
                     alt="Proceso de reinserción social y familiar"
                     width={500}
                     height={400}
