@@ -74,7 +74,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-emerald-600" />
-                <span>Equipo Especializado</span>
+                <span>Equipo especializado</span>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function HomePage() {
                 <div className="mt-6">
                   <Link href="/equipo">
                     <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300">
-                      Conoce Más Sobre Nosotros
+                      Conoce más sobre nosotros
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>

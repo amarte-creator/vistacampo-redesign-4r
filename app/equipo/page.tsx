@@ -213,15 +213,15 @@ export default function EquipoPage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <GraduationCap className="h-4 w-4 text-emerald-600" />
-                <span>Altamente Calificados</span>
+                <span>Altamente calificados</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-4 w-4 text-emerald-600" />
-                <span>Certificaciones Internacionales</span>
+                <span>Certificaciones internacionales</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="h-4 w-4 text-emerald-600" />
-                <span>Enfoque Humano</span>
+                <span>Enfoque humano</span>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function EquipoPage() {
               </div>
               <div className="space-y-2">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600">200+</div>
-                <div className="text-gray-600">Años de Experiencia Combinada</div>
+                <div className="text-gray-600">Años de experiencia combinada</div>
               </div>
               <div className="space-y-2">
                 <div className="text-3xl md:text-4xl font-bold text-purple-600">8</div>
@@ -260,7 +260,7 @@ export default function EquipoPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Conoce a Nuestros Especialistas
+                Conoce a nuestros especialistas
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Un equipo multidisciplinario de excelencia
@@ -473,7 +473,7 @@ export default function EquipoPage() {
                   <div className="flex items-start gap-3">
                     <Users className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">Colaboración Interdisciplinaria</h3>
+                      <h3 className="font-semibold text-gray-900">Colaboración interdisciplinaria</h3>
                       <p className="text-gray-600">
                         Reuniones semanales del equipo para revisar cada caso y ajustar tratamientos
                       </p>
@@ -482,14 +482,14 @@ export default function EquipoPage() {
                   <div className="flex items-start gap-3">
                     <Heart className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">Atención Personalizada</h3>
+                      <h3 className="font-semibold text-gray-900">Atención personalizada</h3>
                       <p className="text-gray-600">Cada paciente tiene un plan de tratamiento único y personalizado</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Star className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">Excelencia Profesional</h3>
+                      <h3 className="font-semibold text-gray-900">Excelencia profesional</h3>
                       <p className="text-gray-600">
                         Formación continua y actualización constante en las mejores prácticas
                       </p>
@@ -511,7 +511,7 @@ export default function EquipoPage() {
                       <Users className="h-6 w-6 text-emerald-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">Equipo Unido</p>
+                      <p className="font-semibold text-gray-900">Equipo unido</p>
                       <p className="text-sm text-gray-600">Por tu recuperación</p>
                     </div>
                   </div>

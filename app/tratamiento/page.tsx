@@ -61,14 +61,14 @@ export default function TratamientoPage() {
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">Evaluación Médica Integral</h3>
+                      <h3 className="font-semibold text-gray-900">Evaluación médica integral</h3>
                       <p className="text-gray-600">Diagnóstico completo del estado físico y mental del paciente</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">Plan Personalizado</h3>
+                      <h3 className="font-semibold text-gray-900">Plan personalizado</h3>
                       <p className="text-gray-600">
                         Tratamiento adaptado a las necesidades específicas de cada paciente
                       </p>

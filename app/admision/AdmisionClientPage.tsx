@@ -294,11 +294,11 @@ export default function AdmisionClientPage() {
                 primer paso hacia la recuperación ahora mismo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="secondary"
-                    className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
+                    className="w-full justify-center bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4"
                   >
                     <WhatsAppIcon className="mr-2 h-5 w-5" />
                     Llamar ahora: (+58) 412-231-5968
@@ -312,7 +312,7 @@ export default function AdmisionClientPage() {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Shield className="h-4 w-4" />
-                  <span>100% Confidencial</span>
+                  <span>100% confidencial</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Heart className="h-4 w-4" />
