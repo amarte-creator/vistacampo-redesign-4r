@@ -45,7 +45,7 @@ const equipoData = {
       nombre: "Dra. María Alvarez",
       cargo: "Miembro del comite científico",
       especialidad: "Psicología Clínica",
-      imagen: "/images/Maria-Alvares-Miembro del comité Científico.jpg",
+      imagen: "/images/Maria-Alvares.jpg",
       experiencia: "15+ años",
       educacion: [
         "Licenciatura en Psicología - Universidad Católica Andrés Bello",
