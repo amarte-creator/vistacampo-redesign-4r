@@ -1,0 +1,215 @@
+{
+  "language": "English",
+  "site": {
+    "title": "Vistacampo - Addiction Rehabilitation Center in Colonia Tovar",
+    "description": "Specialized center for addiction treatment in Colonia Tovar, Venezuela. We offer medical detox, individual and group therapy in a safe and confidential environment."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "treatment": "Treatment",
+    "team": "Team",
+    "blog": "Blog",
+    "contact": "Contact",
+    "admission": "Admission",
+    "facilities": "Facilities",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "actions": {
+    "moreInfo": "More information",
+    "contactWhatsApp": "Contact via WhatsApp",
+    "requestHelp": "Request help",
+    "requestHelpNow": "Request help now",
+    "learnMoreTreatment": "Learn more about our treatment",
+    "learnMoreAboutUs": "Learn more about us"
+  },
+  "badges": {
+    "specializedRehab": "Specialized rehabilitation center",
+    "aboutVistacampo": "About Vistacampo",
+    "founderMessage": "Founder’s message",
+    "ourServices": "Our services",
+    "testimonials": "Testimonials"
+  },
+  "features": {
+    "confidential": "100% Confidential",
+    "attention247": "24/7 Care",
+    "specializedTeam": "Specialized team",
+    "personalizedAttention": "Personalized care",
+    "available247": "Available 24/7"
+  },
+  "cta": {
+    "ready": "Ready to take the first step?",
+    "text": "If you feel you’ve hit rock bottom and it’s time to make the decision to pause, recover your life, and free yourself from the terrible dependence on alcohol and other drugs; if you can’t bear to see your family and friends suffer as a consequence of your uncontrollable use; then, count on us."
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "switchToSpanish": "ES",
+    "switchToEnglish": "EN"
+  },
+  "treatment": {
+    "meta": {
+      "title": "Addiction Treatment - Therapeutic Programs | Vistacampo",
+      "description": "Discover our comprehensive addiction treatment programs. Medical detox, individual and group therapy, and post-treatment follow-up in Colonia Tovar, Venezuela.",
+      "keywords": "addiction treatment, detox, therapy, rehabilitation, Colonia Tovar, Venezuela"
+    },
+    "hero": {
+      "badge": "Therapeutic programs",
+      "title": "Comprehensive and personalized treatment",
+      "subtitle": "Our specialized medical and psychological approach will support you at every stage of your recovery, from detoxification to long-term follow-up.",
+      "contact": "Free consultation"
+    },
+    "approach": {
+      "badge": "Our approach",
+      "title": "We combine medicine and specialized psychology",
+      "description": "Our treatment integrates specialized medical care with advanced psychological therapies, ensuring a complete approach to addiction at the physical, mental, and emotional levels.",
+      "points": [
+        { "title": "Comprehensive medical assessment", "text": "Complete diagnosis of the patient’s physical and mental condition" },
+        { "title": "Personalized plan", "text": "Treatment tailored to each patient’s specific needs" },
+        { "title": "24/7 supervision", "text": "Continuous medical monitoring throughout the process" }
+      ],
+      "imageAlt": "Vistacampo medical team performing a comprehensive assessment"
+    },
+    "goals": {
+      "badge": "Our goals",
+      "title": "Treatment objectives",
+      "description": "Our therapeutic program is designed to achieve comprehensive and sustainable recovery, addressing all aspects of addiction and its consequences.",
+      "cards": [
+        {
+          "title": "Comprehensive diagnosis",
+          "text": "Identify and correctly diagnose the degree of dependence, including medications, possible complications, and organic and psychological alterations."
+        },
+        {
+          "title": "Therapeutic strategies",
+          "text": "Develop effective therapeutic strategies to accompany the patient during treatment, creating awareness of the illness, moving away from use, and learning to live with dignity."
+        },
+        {
+          "title": "Comprehensive reintegration",
+          "text": "Achieve gradual family, social, and professional reintegration until normality is reached in all areas of life in a full and satisfactory way."
+        },
+        {
+          "title": "Family support",
+          "text": "Ensure that relatives and partners understand addiction, get actively involved in the recovery process, and address their own co-addiction."
+        }
+      ]
+    },
+    "phases": {
+      "badge": "Structured process",
+      "title": "Treatment phases",
+      "description": "The length of stay depends on each patient’s evolution and adaptation. As a guideline, most patients complete a 16 to 20-week program, going through the 4 fundamental phases.",
+      "items": [
+        {
+          "title": "Detoxification",
+          "subtitle": "First 15–20 days",
+          "text": "It begins on the day of admission and continues for the first fifteen to twenty days. During this period, intervention focuses on physical detoxification under strict observation by the medical team.",
+          "points": [
+            "Pharmacological support as medically required",
+            "Diagnostics to detect co-occurring disorders",
+            "Rest, balanced nutrition, and sleep recovery",
+            "Initial exercise routine plus individual and group therapies"
+          ],
+          "imageAlt": "Medically supervised detox process"
+        },
+        {
+          "title": "Habit reversal",
+          "subtitle": "Changing habits and behaviors",
+          "text": "Years of use and addiction disrupt normal life, interrupt growth and maturity, and lead to harmful habits, behaviors, patterns, and beliefs.",
+          "points": [
+            "Identify negative habits and attitudes",
+            "Replace them with a new life structure",
+            "Improve relationships with oneself and family",
+            "Develop a personal life project"
+          ],
+          "imageAlt": "Habit change and habit reversal process"
+        },
+        {
+          "title": "Rehabilitation",
+          "subtitle": "Personal growth and skill development",
+          "text": "Continue the process of personal growth and develop the skills that were interrupted due to drug use.",
+          "points": [
+            "Intensive group and individual therapies",
+            "Art therapy, yoga, and physical exercise",
+            "Relaxation techniques and impulse control",
+            "Recovery of self-esteem and personal dignity"
+          ],
+          "imageAlt": "Rehabilitation and personal growth process"
+        },
+        {
+          "title": "Reintegration",
+          "subtitle": "Preparation for normal life",
+          "text": "During the stay, especially in the final weeks, the patient is prepared for reintegration into family, social, and work environments.",
+          "points": [
+            "Gradual preparation for normal life",
+            "Regaining previous quality-of-life levels",
+            "Post-discharge guidance and counseling for 2–5 years",
+            "Reduced risk of relapse"
+          ],
+          "imageAlt": "Social and family reintegration process"
+        }
+      ]
+    },
+    "stages": {
+      "badge": "Recovery process",
+      "title": "Treatment stages",
+      "description": "Our program is developed in structured stages to ensure progressive and sustainable recovery over time.",
+      "cards": [
+        {
+          "title": "Medical detox",
+          "text": "Medically supervised process to safely remove substances from the body.",
+          "duration": "Duration: 7–14 days",
+          "supervision": "24/7 medical supervision"
+        },
+        {
+          "title": "Intensive therapy",
+          "text": "Combination of individual, group, and family therapy to address the root causes of addiction.",
+          "duration": "Duration: 30–90 days",
+          "sessions": "Daily sessions"
+        },
+        {
+          "title": "Ongoing follow-up",
+          "text": "Long-term support to maintain sobriety and prevent relapses.",
+          "duration": "Duration: 12+ months",
+          "consults": "Regular consultations"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Frequently asked questions",
+      "title": "We answer your questions",
+      "description": "The most common questions about our treatment and recovery process.",
+      "items": [
+        {
+          "q": "How long does the complete treatment take?",
+          "a": "The length of treatment varies according to each patient’s individual needs. Typically, the residential program lasts between 30 and 90 days, followed by a follow-up program that can extend for 12 months or more. Our team constantly evaluates progress to determine the optimal duration."
+        },
+        {
+          "q": "Is the treatment completely confidential?",
+          "a": "Absolutely. We maintain the strictest medical confidentiality. All patient information is protected by professional secrecy and is only shared with the patient’s express consent or in cases required by law. Our facilities are designed to ensure total privacy."
+        },
+        {
+          "q": "What types of addictions do you treat?",
+          "a": "We treat addictions to alcohol, cocaine, marijuana, tobacco, e-cigarettes, prescription pills, designer drugs, and emotional eating. We also address addictive behaviors such as gambling, video games, social media, work, sex, sports, and cosmetic surgeries."
+        },
+        {
+          "q": "Can the family participate in the treatment?",
+          "a": "Yes, family participation is essential in our therapeutic approach. We offer family therapy sessions, educational programs for relatives, and support groups. We believe recovery is more effective when the whole family is involved and receives the necessary support."
+        },
+        {
+          "q": "What happens after discharge?",
+          "a": "Our commitment continues after discharge. We provide a personalized follow-up plan that includes regular consultations, support groups, maintenance therapy, and access to community resources. We also offer a 24/7 support line for crisis situations and a relapse prevention program."
+        },
+        {
+          "q": "Do you accept health insurance?",
+          "a": "For now we do not work with health insurance, but we offer flexible financing plans. Our admissions team can help you explore payment options. We believe cost should not be a barrier to receiving the treatment you need."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Start your recovery process today",
+      "text": "Our specialized team is ready to design a personalized treatment plan tailored to your specific needs.",
+      "contact": "Free consultation",
+      "admission": "Admission process"
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "language": "Español",
+  "site": {
+    "title": "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
+    "description": "Centro especializado en tratamiento de adicciones en Colonia Tovar, Venezuela. Ofrecemos desintoxicación médica, terapia individual y grupal en un ambiente seguro y confidencial."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "treatment": "Tratamiento",
+    "team": "Equipo",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "admission": "Admisión",
+    "facilities": "Instalaciones",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "actions": {
+    "moreInfo": "Más información",
+    "contactWhatsApp": "Contactar por WhatsApp",
+    "requestHelp": "Solicita ayuda",
+    "requestHelpNow": "Solicita ayuda ahora",
+    "learnMoreTreatment": "Conoce nuestro tratamiento",
+    "learnMoreAboutUs": "Conoce más sobre nosotros"
+  },
+  "badges": {
+    "specializedRehab": "Centro de rehabilitación especializado",
+    "aboutVistacampo": "Sobre Vistacampo",
+    "founderMessage": "Mensaje del fundador",
+    "ourServices": "Nuestros servicios",
+    "testimonials": "Testimonios"
+  },
+  "features": {
+    "confidential": "100% Confidencial",
+    "attention247": "Atención 24/7",
+    "specializedTeam": "Equipo especializado",
+    "personalizedAttention": "Atención personalizada",
+    "available247": "Disponible 24/7"
+  },
+  "cta": {
+    "ready": "¿Listo para dar el primer paso?",
+    "text": "Si sientes que has pisado fondo y que llegó el momento de tomar la decisión de hacer un alto para recuperar tu vida y liberarte de la terrible dependencia al alcohol y otras drogas; si no soportas más ver a tus familiares y amigos sufrir como consecuencia de tu incontrolable consumo; entonces, cuenta con nosotros."
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "switchToSpanish": "ES",
+    "switchToEnglish": "EN"
+  },
+  "treatment": {
+    "meta": {
+      "title": "Tratamiento de Adicciones - Programas Terapéuticos | Vistacampo",
+      "description": "Conoce nuestros programas de tratamiento integral para adicciones. Desintoxicación médica, terapia individual y grupal, seguimiento post-tratamiento en Colonia Tovar, Venezuela.",
+      "keywords": "tratamiento adicciones, desintoxicación, terapia, rehabilitación, Colonia Tovar, Venezuela"
+    },
+    "hero": {
+      "badge": "Programas terapéuticos",
+      "title": "Tratamiento integral y personalizado",
+      "subtitle": "Nuestro enfoque médico y psicológico especializado te acompañará en cada etapa de tu proceso de recuperación, desde la desintoxicación hasta el seguimiento a largo plazo.",
+      "contact": "Consulta gratuita"
+    },
+    "approach": {
+      "badge": "Nuestro enfoque",
+      "title": "Combinamos medicina y psicología especializada",
+      "description": "Nuestro tratamiento integra la atención médica especializada con terapias psicológicas avanzadas, asegurando un abordaje completo de la adicción tanto a nivel físico como mental y emocional.",
+      "points": [
+        { "title": "Evaluación médica integral", "text": "Diagnóstico completo del estado físico y mental del paciente" },
+        { "title": "Plan personalizado", "text": "Tratamiento adaptado a las necesidades específicas de cada paciente" },
+        { "title": "Supervisión 24/7", "text": "Monitoreo médico continuo durante todo el proceso" }
+      ],
+      "imageAlt": "Equipo médico de Vistacampo realizando evaluación integral"
+    },
+    "goals": {
+      "badge": "Nuestros objetivos",
+      "title": "Objetivos del tratamiento",
+      "description": "Nuestro programa terapéutico está diseñado para lograr una recuperación integral y sostenible, abordando todos los aspectos de la adicción y sus consecuencias.",
+      "cards": [
+        {
+          "title": "Diagnóstico integral",
+          "text": "Identificar y diagnosticar correctamente el grado de dependencia del paciente a las drogas, incluidos los fármacos, sus posibles complicaciones, alteraciones orgánicas y psicológicas."
+        },
+        {
+          "title": "Estrategias terapéuticas",
+          "text": "Desarrollar estrategias terapéuticas efectivas para acompañar al paciente durante el tratamiento, transmitiendo conciencia de su enfermedad, alejándose del consumo y enseñándole a vivir con dignidad."
+        },
+        {
+          "title": "Reinserción integral",
+          "text": "Conseguir la gradual reinserción familiar, social y profesional del paciente hasta alcanzar la normalidad en todos los aspectos que circundan su vida, de manera plena y satisfactoria."
+        },
+        {
+          "title": "Apoyo familiar",
+          "text": "Lograr que los familiares y las parejas conozcan y comprendan la adicción, involucrándose activamente en el proceso de recuperación y ayudándoles a tratar su propia coadicción."
+        }
+      ]
+    },
+    "phases": {
+      "badge": "Proceso estructurado",
+      "title": "Fases del tratamiento",
+      "description": "La duración del ingreso dependerá de la evolución y adaptación del paciente. A título orientativo, la mayoría de los pacientes completan un programa de 16 a 20 semanas, cumpliendo las 4 fases fundamentales.",
+      "items": [
+        {
+          "title": "Desintoxicación",
+          "subtitle": "Primeros 15-20 días",
+          "text": "Comienza a partir del día del ingreso hasta los primeros quince a veinte días. En este período se realiza una intervención centrada en la desintoxicación física en estricta observación del equipo médico.",
+          "points": [
+            "Soporte farmacológico según necesidad médica",
+            "Diagnósticos para detectar trastornos paralelos",
+            "Descanso, alimentación equilibrada y reconciliación del sueño",
+            "Rutina inicial de ejercicios y terapias individuales y grupales"
+          ],
+          "imageAlt": "Proceso de desintoxicación médica supervisada"
+        },
+        {
+          "title": "Deshabituación",
+          "subtitle": "Cambio de hábitos y conductas",
+          "text": "Los años de consumo y la adicción alteran la vida normal de las personas, interrumpen su proceso de crecimiento y madurez, llevando al adicto a hábitos, conductas, patrones y creencias equivocadas.",
+          "points": [
+            "Identificación de hábitos y actitudes negativas",
+            "Sustitución por nueva estructura de vida",
+            "Mejora de relaciones consigo mismo y familia",
+            "Desarrollo del proyecto de vida personal"
+          ],
+          "imageAlt": "Proceso de deshabituación y cambio de hábitos"
+        },
+        {
+          "title": "Rehabilitación",
+          "subtitle": "Crecimiento personal y desarrollo de habilidades",
+          "text": "Consiste en continuar el proceso de crecimiento personal y desarrollar las habilidades que el paciente interrumpió debido al consumo de drogas.",
+          "points": [
+            "Terapias de grupo e individuales intensivas",
+            "Arte terapia, yoga y ejercicios físicos",
+            "Técnicas de relajación y control de impulsos",
+            "Recuperación de autoestima y dignidad personal"
+          ],
+          "imageAlt": "Proceso de rehabilitación y crecimiento personal"
+        },
+        {
+          "title": "Reinserción",
+          "subtitle": "Preparación para la vida normal",
+          "text": "Durante el ingreso y principalmente en las últimas semanas del tratamiento, al paciente se le prepara para su reinserción en el entorno familiar, social y laboral.",
+          "points": [
+            "Preparación gradual para la vida normal",
+            "Alcanzar el nivel de calidad de vida perdido",
+            "Asesoría y orientación post-alta por 2-5 años",
+            "Reducción de riesgos de recaída"
+          ],
+          "imageAlt": "Proceso de reinserción social y familiar"
+        }
+      ]
+    },
+    "stages": {
+      "badge": "Proceso de recuperación",
+      "title": "Etapas del tratamiento",
+      "description": "Nuestro programa se desarrolla en etapas estructuradas que garantizan una recuperación progresiva y sostenible en el tiempo.",
+      "cards": [
+        {
+          "title": "Desintoxicación médica",
+          "text": "Proceso supervisado médicamente para eliminar las sustancias del organismo de forma segura.",
+          "duration": "Duración: 7-14 días",
+          "supervision": "Supervisión médica 24/7"
+        },
+        {
+          "title": "Terapia intensiva",
+          "text": "Combinación de terapia individual, grupal y familiar para abordar las causas profundas de la adicción.",
+          "duration": "Duración: 30-90 días",
+          "sessions": "Sesiones diarias"
+        },
+        {
+          "title": "Seguimiento continuo",
+          "text": "Acompañamiento a largo plazo para mantener la sobriedad y prevenir recaídas.",
+          "duration": "Duración: 12+ meses",
+          "consults": "Consultas regulares"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Resolvemos tus dudas",
+      "description": "Las preguntas más comunes sobre nuestro proceso de tratamiento y recuperación.",
+      "items": [
+        {
+          "q": "¿Cuánto tiempo dura el tratamiento completo?",
+          "a": "La duración del tratamiento varía según las necesidades individuales de cada paciente. Típicamente, el programa residencial dura entre 30 a 90 días, seguido de un programa de seguimiento que puede extenderse por 12 meses o más. Nuestro equipo evalúa constantemente el progreso para determinar la duración óptima."
+        },
+        {
+          "q": "¿El tratamiento es completamente confidencial?",
+          "a": "Absolutamente. Mantenemos la más estricta confidencialidad médica. Toda la información del paciente está protegida por el secreto profesional y solo se comparte con el consentimiento expreso del paciente o en casos requeridos por ley. Nuestras instalaciones están diseñadas para garantizar la privacidad total."
+        },
+        {
+          "q": "¿Qué tipos de adicciones tratan?",
+          "a": "Tratamos adicciones a alcohol, cocaína, marihuana, tabaco, cigarrillos electrónicos, pastillas de prescripción, drogas de diseño y comida emocional. También abordamos conductas adictivas como ludopatía, videojuegos, redes sociales, trabajo, sexo, deporte y cirugías cosméticas."
+        },
+        {
+          "q": "¿La familia puede participar en el tratamiento?",
+          "a": "Sí, la participación familiar es fundamental en nuestro enfoque terapéutico. Ofrecemos sesiones de terapia familiar, programas educativos para familiares y grupos de apoyo. Creemos que la recuperación es más efectiva cuando toda la familia está involucrada y recibe el apoyo necesario."
+        },
+        {
+          "q": "¿Qué sucede después del alta médica?",
+          "a": "Nuestro compromiso continúa después del alta. Proporcionamos un plan de seguimiento personalizado que incluye consultas regulares, grupos de apoyo, terapia de mantenimiento y acceso a recursos comunitarios. También ofrecemos línea de apoyo 24/7 para situaciones de crisis y un programa de prevención de recaídas."
+        },
+        {
+          "q": "¿Aceptan seguros médicos?",
+          "a": "Por ahora no trabajamos con seguros médicos pero ofrecemos planes de financiamiento flexibles. Nuestro equipo de admisiones puede ayudarte a explorar opciones de pago. Creemos que el costo no debe ser una barrera para recibir el tratamiento que necesitas."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Comienza tu proceso de recuperación hoy",
+      "text": "Nuestro equipo especializado está listo para diseñar un plan de tratamiento personalizado que se adapte a tus necesidades específicas.",
+      "contact": "Consulta gratuita",
+      "admission": "Proceso de admisión"
+    }
+  }
+}

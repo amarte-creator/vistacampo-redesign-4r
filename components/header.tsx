@@ -14,14 +14,21 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
+  // Determine current locale from pathname. Fallback to 'en'
+  const locale = typeof window !== "undefined"
+    ? (window.location.pathname.split("/")[1] || "en")
+    : "en"
+
+  const base = `/${locale}`
+
   const navigation = [
-    { name: "Inicio", href: "/" },
-    { name: "Tratamiento", href: "/tratamiento" },
-    { name: "Instalaciones", href: "/instalaciones" },
-    { name: "Equipo", href: "/equipo" },
-    { name: "Admisión", href: "/admision" },
-    { name: "Noticias", href: "/noticias" },
-    { name: "Contacto", href: "/contacto" },
+    { name: locale === "en" ? "Home" : "Inicio", href: `${base}` },
+    { name: locale === "en" ? "Treatment" : "Tratamiento", href: `${base}/tratamiento` },
+    { name: locale === "en" ? "Facilities" : "Instalaciones", href: `${base}/instalaciones` },
+    { name: locale === "en" ? "Team" : "Equipo", href: `${base}/equipo` },
+    { name: locale === "en" ? "Admission" : "Admisión", href: `${base}/admision` },
+    { name: locale === "en" ? "News" : "Noticias", href: `${base}/noticias` },
+    { name: locale === "en" ? "Contact" : "Contacto", href: `${base}/contacto` },
   ]
 
   return (
@@ -67,7 +74,7 @@ export function Header() {
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
         <div className="relative flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center">
+          <Link href={base} className="flex items-center">
             <Image
               src="/images/logo-vistacampo.png"
               alt="Vistacampo - Centro Terapéutico"
@@ -92,10 +99,19 @@ export function Header() {
           </nav>
 
           <div className="flex items-center space-x-2">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+            {/* Language switcher - non-invasive: small inline buttons */}
+            <div className="hidden md:block mr-2">
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+              <div className="inline-flex rounded-md border border-gray-200 overflow-hidden">
+                <Link href="/es" className="px-2 py-1 text-xs font-medium hover:bg-gray-50">ES</Link>
+                <span className="text-gray-300">|</span>
+                <Link href="/en" className="px-2 py-1 text-xs font-medium hover:bg-gray-50">EN</Link>
+              </div>
+            </div>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" aria-label={locale === "en" ? "Request help on WhatsApp" : "Solicita ayuda por WhatsApp"}>
               <Button className="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                 <WhatsAppIcon className="mr-2 h-4 w-4" />
-                Solicita ayuda
+                {locale === "en" ? "Request help" : "Solicita ayuda"}
               </Button>
               <Button size="icon" className="sm:hidden rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                 <WhatsAppIcon className="h-5 w-5" />
@@ -134,10 +150,19 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
+                  {/* Language switcher in mobile drawer */}
+                  <div className="flex items-center justify-between mt-2">
+                    <span className="text-sm text-gray-500">{locale === "en" ? "Language" : "Idioma"}</span>
+                    <div className="inline-flex rounded-md border border-gray-200 overflow-hidden">
+                      <Link href="/es" className="px-3 py-1 text-sm font-medium hover:bg-gray-50">ES</Link>
+                      <span className="text-gray-300">|</span>
+                      <Link href="/en" className="px-3 py-1 text-sm font-medium hover:bg-gray-50">EN</Link>
+                    </div>
+                  </div>
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                     <Button className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700">
                       <WhatsAppIcon className="mr-2 h-4 w-4" />
-                      Solicita ayuda
+                      {locale === "en" ? "Request help" : "Solicita ayuda"}
                     </Button>
                   </a>
                 </div>

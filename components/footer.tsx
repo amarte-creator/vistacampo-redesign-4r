@@ -1,24 +1,33 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MessageCircle, Mail, MapPin, Facebook, Instagram, Heart } from "lucide-react"
+import { Mail, MapPin, Facebook, Instagram, Heart } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { useTranslation } from "react-i18next"
 
 export function Footer() {
+  const { t, i18n } = useTranslation('common')
+  const lng = i18n?.language?.split?.('-')?.[0] || 'en'
+  const isEn = lng === 'en'
+
   return (
     <footer className="bg-rose-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo y Descripción */}
+          {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="text-2xl font-bold text-emerald-400">Vistacampo</div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Centro especializado en rehabilitación de adicciones en Colonia Tovar, Venezuela. Tu recuperación es nuestra
-              misión.
+              {isEn
+                ? "Specialized center in addiction rehabilitation in Colonia Tovar, Venezuela. Your recovery is our mission."
+                : "Centro especializado en rehabilitación de adicciones en Colonia Tovar, Venezuela. Tu recuperación es nuestra misión."
+              }
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors">
@@ -33,53 +42,59 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Enlaces Rápidos */}
+          {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-emerald-400">Enlaces rápidos</h3>
+            <h3 className="text-lg font-semibold text-emerald-400">
+              {isEn ? "Quick links" : "Enlaces rápidos"}
+            </h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/tratamiento" className="text-gray-300 hover:text-white transition-colors">
-                  Tratamiento
+                <Link href={isEn ? "/en/treatment" : "/tratamiento"} className="text-gray-300 hover:text-white transition-colors">
+                  {isEn ? "Treatment" : "Tratamiento"}
                 </Link>
               </li>
               <li>
-                <Link href="/instalaciones" className="text-gray-300 hover:text-white transition-colors">
-                  Instalaciones
+                <Link href={isEn ? "/en/facilities" : "/instalaciones"} className="text-gray-300 hover:text-white transition-colors">
+                  {isEn ? "Facilities" : "Instalaciones"}
                 </Link>
               </li>
               <li>
-                <Link href="/equipo" className="text-gray-300 hover:text-white transition-colors">
-                  Nuestro equipo
+                <Link href={isEn ? "/en/team" : "/equipo"} className="text-gray-300 hover:text-white transition-colors">
+                  {isEn ? "Our team" : "Nuestro equipo"}
                 </Link>
               </li>
               <li>
-                <Link href="/admision" className="text-gray-300 hover:text-white transition-colors">
-                  Admisión
+                <Link href={isEn ? "/en/admission" : "/admision"} className="text-gray-300 hover:text-white transition-colors">
+                  {isEn ? "Admission" : "Admisión"}
                 </Link>
               </li>
               <li>
-                <Link href="/noticias" className="text-gray-300 hover:text-white transition-colors">
-                  Noticias
+                <Link href={isEn ? "/en/news" : "/noticias"} className="text-gray-300 hover:text-white transition-colors">
+                  {isEn ? "News" : "Noticias"}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Servicios */}
+          {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-emerald-400">Servicios</h3>
+            <h3 className="text-lg font-semibold text-emerald-400">
+              {isEn ? "Services" : "Servicios"}
+            </h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">Desintoxicación médica</li>
-              <li className="text-gray-300">Terapia individual</li>
-              <li className="text-gray-300">Terapia grupal</li>
-              <li className="text-gray-300">Terapia familiar</li>
-              <li className="text-gray-300">Seguimiento post-tratamiento</li>
+              <li className="text-gray-300">{isEn ? "Medical detox" : "Desintoxicación médica"}</li>
+              <li className="text-gray-300">{isEn ? "Individual therapy" : "Terapia individual"}</li>
+              <li className="text-gray-300">{isEn ? "Group therapy" : "Terapia grupal"}</li>
+              <li className="text-gray-300">{isEn ? "Family therapy" : "Terapia familiar"}</li>
+              <li className="text-gray-300">{isEn ? "Aftercare follow-up" : "Seguimiento post-tratamiento"}</li>
             </ul>
           </div>
 
-          {/* Contacto */}
+          {/* Contact */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-emerald-400">Contacto</h3>
+            <h3 className="text-lg font-semibold text-emerald-400">
+              {isEn ? "Contact" : "Contacto"}
+            </h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
@@ -93,14 +108,16 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-emerald-400" />
-                <span className="text-gray-300">Colonia Tovar, Venezuela</span>
+                <span className="text-gray-300">
+                  {isEn ? "Colonia Tovar, Venezuela" : "Colonia Tovar, Venezuela"}
+                </span>
               </div>
             </div>
             <div className="pt-4">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
                   <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
-                  Solicita ayuda 24/7
+                  {isEn ? "Request help 24/7" : "Solicita ayuda 24/7"}
                 </Button>
               </a>
             </div>
@@ -111,18 +128,25 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <p className="text-gray-400 text-sm">
-                © {new Date().getFullYear()} Vistacampo. Todos los derechos reservados.
+                {isEn
+                  ? `© ${new Date().getFullYear()} Vistacampo. All rights reserved.`
+                  : `© ${new Date().getFullYear()} Vistacampo. Todos los derechos reservados.`
+                }
               </p>
               <div className="flex items-center gap-4">
-                <Link href="/terminos" className="text-gray-400 hover:text-white text-sm underline underline-offset-4">Términos y condiciones</Link>
+                <Link href={isEn ? "/en/terms" : "/terminos"} className="text-gray-400 hover:text-white text-sm underline underline-offset-4">
+                  {isEn ? "Terms and conditions" : "Términos y condiciones"}
+                </Link>
                 <span className="text-gray-400">|</span>
-                <Link href="/privacidad" className="text-gray-400 hover:text-white text-sm underline underline-offset-4">Política de privacidad</Link>
+                <Link href={isEn ? "/en/privacy" : "/privacidad"} className="text-gray-400 hover:text-white text-sm underline underline-offset-4">
+                  {isEn ? "Privacy policy" : "Política de privacidad"}
+                </Link>
               </div>
             </div>
             <div className="flex items-center space-x-1 text-gray-400 text-sm mt-4 md:mt-0">
-              <span>Hecho con</span>
+              <span>{isEn ? "Made with" : "Hecho con"}</span>
               <Heart className="h-4 w-4 text-red-500" />
-              <span>para tu recuperación</span>
+              <span>{isEn ? "for your recovery" : "para tu recuperación"}</span>
             </div>
           </div>
         </div>
