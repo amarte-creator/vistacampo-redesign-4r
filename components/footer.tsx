@@ -7,12 +7,14 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 import { WHATSAPP_LINK, WHATSAPP_LINK_EN } from "@/lib/constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { useTranslation } from "react-i18next"
+import { usePathname } from "next/navigation"
 
 export function Footer() {
-  const { t, i18n } = useTranslation('common')
-  const lng = i18n?.language?.split?.('-')?.[0] || 'en'
-  const isEn = lng === 'en'
+  const pathname = usePathname()
+  
+  // Determine current locale from pathname (same as header)
+  const locale = pathname?.split("/")[1] === "es" ? "es" : "en"
+  const isEn = locale === "en"
 
   return (
     <footer className="bg-rose-900 text-white">
