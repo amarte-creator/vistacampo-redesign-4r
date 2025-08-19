@@ -7,18 +7,17 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, MessageCircle, Mail, Facebook, Instagram, MapPin } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
-import { WHATSAPP_LINK } from "@/lib/constants"
+import { WHATSAPP_LINK, WHATSAPP_LINK_EN } from "@/lib/constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { usePathname } from "next/navigation"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
-  // Determine current locale from pathname. Fallback to 'en'
-  const locale = typeof window !== "undefined"
-    ? (window.location.pathname.split("/")[1] || "en")
-    : "en"
-
+  // Determine current locale from pathname
+  const locale = pathname?.split("/")[1] === "es" ? "es" : "en"
   const base = `/${locale}`
 
   const navigation = [
@@ -26,55 +25,17 @@ export function Header() {
     { name: locale === "en" ? "Treatment" : "Tratamiento", href: `${base}/tratamiento` },
     { name: locale === "en" ? "Facilities" : "Instalaciones", href: `${base}/instalaciones` },
     { name: locale === "en" ? "Team" : "Equipo", href: `${base}/equipo` },
-    { name: locale === "en" ? "Admission" : "Admisión", href: `${base}/admision` },
     { name: locale === "en" ? "News" : "Noticias", href: `${base}/noticias` },
     { name: locale === "en" ? "Contact" : "Contacto", href: `${base}/contacto` },
   ]
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
-      
-      {/*
-      <div className="bg-emerald-700 text-white py-2 text-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between items-center gap-2">
-            <div className="flex flex-wrap items-center gap-4">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-emerald-200 transition-colors">
-                <WhatsAppIcon className="h-3 w-3" />
-                <span>(+58) 412-231-5968</span>
-              </a>
-              <a
-                href="mailto:info@vistacampo.com"
-                className="flex items-center gap-1 hover:text-emerald-200 transition-colors"
-              >
-                <Mail className="h-3 w-3" />
-                <span>info@vistacampo.com</span>
-              </a>
-              <div className="flex items-center gap-1">
-                <MapPin className="h-3 w-3" />
-                <span>Colonia Tovar, Venezuela</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200 transition-colors">
-                <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" style={{ color: '#fff' }} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      */}
-
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
-        <div className="relative flex items-center justify-between h-20">
-          <Link href={base} className="flex items-center">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link href={base} className="flex items-center flex-shrink-0">
             <Image
               src="/images/logo-vistacampo.png"
               alt="Vistacampo - Centro Terapéutico"
@@ -85,30 +46,49 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-x-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center gap-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors whitespace-nowrap"
               >
                 {item.name}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center space-x-2">
-            {/* Language switcher - non-invasive: small inline buttons */}
-            <div className="hidden md:block mr-2">
-              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          {/* Right side - Language switcher, WhatsApp, Social icons, Mobile menu */}
+          <div className="flex items-center gap-3">
+            {/* Language switcher */}
+            <div className="hidden md:flex items-center">
               <div className="inline-flex rounded-md border border-gray-200 overflow-hidden">
-                <Link href="/es" className="px-2 py-1 text-xs font-medium hover:bg-gray-50">ES</Link>
-                <span className="text-gray-300">|</span>
-                <Link href="/en" className="px-2 py-1 text-xs font-medium hover:bg-gray-50">EN</Link>
+                <Link 
+                  href={pathname?.replace(/^\/(es|en)/, "/es") || "/es"} 
+                  className={`px-3 py-1.5 text-sm font-medium transition-colors ${
+                    locale === "es" 
+                      ? "bg-emerald-600 text-white" 
+                      : "hover:bg-gray-50 text-gray-700"
+                  }`}
+                >
+                  ES
+                </Link>
+                <Link 
+                  href={pathname?.replace(/^\/(es|en)/, "/en") || "/en"} 
+                  className={`px-3 py-1.5 text-sm font-medium transition-colors ${
+                    locale === "en" 
+                      ? "bg-emerald-600 text-white" 
+                      : "hover:bg-gray-50 text-gray-700"
+                  }`}
+                >
+                  EN
+                </Link>
               </div>
             </div>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" aria-label={locale === "en" ? "Request help on WhatsApp" : "Solicita ayuda por WhatsApp"}>
+
+            {/* WhatsApp Button */}
+            <a href={locale === "en" ? WHATSAPP_LINK_EN : WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" aria-label={locale === "en" ? "Request help on WhatsApp" : "Solicita ayuda por WhatsApp"}>
               <Button className="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 shadow-lg">
                 <WhatsAppIcon className="mr-2 h-4 w-4" />
                 {locale === "en" ? "Request help" : "Solicita ayuda"}
@@ -118,22 +98,22 @@ export function Header() {
               </Button>
             </a>
 
-            {/* Social Icons */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
+            {/* Social Icons - Hidden on smaller screens to prevent overlap */}
+            <div className="hidden xl:flex items-center space-x-3">
                <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
-                <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Facebook className="h-4 w-4" />
               </a>
               <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
-                <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Instagram className="h-4 w-4" />
               </a>
               <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
-                <FontAwesomeIcon icon={faYoutube} className="h-4 w-4 sm:h-5 sm:w-5" />
+                <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" />
               </a>
             </div>
 
             {/* Mobile Navigation */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild className="xl:hidden">
+              <SheetTrigger asChild className="lg:hidden">
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
                 </Button>
@@ -150,16 +130,50 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
+                  
                   {/* Language switcher in mobile drawer */}
-                  <div className="flex items-center justify-between mt-2">
+                  <div className="flex items-center justify-between mt-6 pt-6 border-t">
                     <span className="text-sm text-gray-500">{locale === "en" ? "Language" : "Idioma"}</span>
                     <div className="inline-flex rounded-md border border-gray-200 overflow-hidden">
-                      <Link href="/es" className="px-3 py-1 text-sm font-medium hover:bg-gray-50">ES</Link>
-                      <span className="text-gray-300">|</span>
-                      <Link href="/en" className="px-3 py-1 text-sm font-medium hover:bg-gray-50">EN</Link>
+                      <Link 
+                        href={pathname?.replace(/^\/(es|en)/, "/es") || "/es"} 
+                        className={`px-3 py-1.5 text-sm font-medium transition-colors ${
+                          locale === "es" 
+                            ? "bg-emerald-600 text-white" 
+                            : "hover:bg-gray-50 text-gray-700"
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        ES
+                      </Link>
+                      <Link 
+                        href={pathname?.replace(/^\/(es|en)/, "/en") || "/en"} 
+                        className={`px-3 py-1.5 text-sm font-medium transition-colors ${
+                          locale === "en" 
+                            ? "bg-emerald-600 text-white" 
+                            : "hover:bg-gray-50 text-gray-700"
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        EN
+                      </Link>
                     </div>
                   </div>
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+
+                  {/* Social icons in mobile drawer */}
+                  <div className="flex items-center space-x-4 mt-4 pt-4 border-t">
+                    <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                      <Facebook className="h-5 w-5" />
+                    </a>
+                    <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                      <Instagram className="h-5 w-5" />
+                    </a>
+                    <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                      <FontAwesomeIcon icon={faYoutube} className="h-5 w-5" />
+                    </a>
+                  </div>
+
+                  <a href={locale === "en" ? WHATSAPP_LINK_EN : WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                     <Button className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700">
                       <WhatsAppIcon className="mr-2 h-4 w-4" />
                       {locale === "en" ? "Request help" : "Solicita ayuda"}

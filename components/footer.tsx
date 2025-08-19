@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Facebook, Instagram, Heart } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
-import { WHATSAPP_LINK } from "@/lib/constants"
+import { WHATSAPP_LINK, WHATSAPP_LINK_EN } from "@/lib/constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { useTranslation } from "react-i18next"
@@ -64,11 +64,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={isEn ? "/en/admission" : "/admision"} className="text-gray-300 hover:text-white transition-colors">
-                  {isEn ? "Admission" : "Admisión"}
-                </Link>
-              </li>
-              <li>
                 <Link href={isEn ? "/en/news" : "/noticias"} className="text-gray-300 hover:text-white transition-colors">
                   {isEn ? "News" : "Noticias"}
                 </Link>
@@ -97,7 +92,7 @@ export function Footer() {
             </h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                <a href={isEn ? WHATSAPP_LINK_EN : WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
                   <WhatsAppIcon className="h-5 w-5 text-emerald-400" color="#10b981" />
                   <span className="text-gray-300">(+58) 412-231-5968</span>
                 </a>
@@ -114,7 +109,7 @@ export function Footer() {
               </div>
             </div>
             <div className="pt-4">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <a href={isEn ? WHATSAPP_LINK_EN : WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
                   <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
                   {isEn ? "Request help 24/7" : "Solicita ayuda 24/7"}

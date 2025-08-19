@@ -1,16 +1,42 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Shield, Users, Star, ArrowRight, CheckCircle } from "lucide-react"
+import { Heart, Shield, Users, MessageCircle, Star, ArrowRight, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
-import { WHATSAPP_LINK } from "@/lib/constants"
+import { WHATSAPP_LINK_EN } from "@/lib/constants"
 import { TypingText } from "@/components/TypingText"
+import { useTranslation } from "react-i18next"
+import { initI18next } from "@/app/i18n"
 
 export default function HomePage() {
+  const { t, i18n } = useTranslation("common");
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const initializeI18n = async () => {
+      await initI18next("en");
+      setIsReady(true);
+    };
+    initializeI18n();
+  }, []);
+
+  // Show loading state while i18n is initializing
+  if (!isReady) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-emerald-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       {/* 1. Specialized Rehabilitation Center - Hero Section */}
@@ -19,7 +45,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/vc-panoramica.webp"
-            alt="Panoramic view of Vistacampo"
+            alt="Vistacampo panoramic view"
             fill
             priority
             quality={70}
@@ -34,25 +60,25 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-4xl mx-auto text-center space-y-8 text-white">
             <Badge variant="secondary" className="mb-4 text-rose-100 bg-rose-900/40">
-              Specialized rehabilitation center
+              {t("badges.specializedRehab")}
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-emerald-200 via-teal-100 to-blue-200 bg-clip-text text-transparent drop-shadow-lg">Your recovery is our</span>{" "}
               <span className="text-rose-200 drop-shadow-lg">mission</span>
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-              At Vistacampo we offer comprehensive addiction treatment in a safe, private, and professional environment
+              At Vistacampo we offer comprehensive addiction treatment in a safe, private and professional environment
               in Colonia Tovar, Venezuela.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
-                  <span className="block sm:hidden">Request help</span>
-                  <span className="hidden sm:inline">Request help now</span>
+                  <span className="block sm:hidden">{t("actions.requestHelp")}</span>
+                  <span className="hidden sm:inline">{t("actions.requestHelpNow")}</span>
                 </Button>
               </a>
               <Link href="/en/tratamiento">
@@ -61,7 +87,7 @@ export default function HomePage() {
                   size="lg"
                   className="border-rose-900 text-rose-900 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:text-rose-900 focus:text-rose-900"
                 >
-                  Learn about our treatment
+                  {t("actions.learnMoreTreatment")}
                   <ArrowRight className="ml-2 h-5 w-5 text-rose-900" />
                 </Button>
               </Link>
@@ -69,15 +95,15 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white mt-8">
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-emerald-600" />
-                <span>100% Confidential</span>
+                <span>{t("features.confidential")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="h-4 w-4 text-emerald-600" />
-                <span>24/7 Care</span>
+                <span>{t("features.attention247")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-emerald-600" />
-                <span>Specialized team</span>
+                <span>{t("features.specializedTeam")}</span>
               </div>
             </div>
           </div>
@@ -91,7 +117,7 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
-                  About Vistacampo
+                  {t("badges.aboutVistacampo")}
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold text-rose-900">
                   Pioneers in Addiction Treatment in Venezuela
@@ -134,7 +160,7 @@ export default function HomePage() {
                 <div className="mt-6">
                   <Link href="/en/equipo">
                     <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300">
-                      Learn more about us
+                      {t("actions.learnMoreAboutUs")}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -171,7 +197,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-rose-900 border-rose-900 mb-4">
-                Message from the Founder
+                {t("badges.founderMessage")}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-rose-900 mb-4">
                 A story of recovery and hope
@@ -226,7 +252,7 @@ export default function HomePage() {
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      That’s how we founded the Vistacampo Therapeutic Center, together with a multidisciplinary and
+                      That's how we founded the Vistacampo Therapeutic Center, together with a multidisciplinary and
                       scientifically specialized team of doctors, psychiatrists, monitors, and therapists; with the
                       special characteristic that many of them are recovered addicts, in the same Center.
                     </p>
@@ -241,7 +267,7 @@ export default function HomePage() {
                       <p className="text-gray-700 leading-relaxed mb-4 font-medium">
                         You only have to take the first step and contact us at Vistacampo Center{" "}
                         <a
-                          href={WHATSAPP_LINK}
+                          href={WHATSAPP_LINK_EN}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-emerald-600 font-semibold hover:underline"
@@ -259,7 +285,7 @@ export default function HomePage() {
                       being able to avoid it, hit rock bottom…
                     </p>
 
-                    <p className="text-emerald-700 font-semibold text-lg">We’re waiting for you.</p>
+                    <p className="text-emerald-700 font-semibold text-lg">We're waiting for you.</p>
 
                     <div className="mt-6 pt-4 border-t border-emerald-200">
                       <p className="text-gray-600 italic">
@@ -272,10 +298,10 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer" className="flex-1">
                     <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 w-full">
                       <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
-                      Contact us
+                      {t("actions.contactWhatsApp")}
                     </Button>
                   </a>
                   <Link href="/en/contacto" className="flex-1">
@@ -283,7 +309,7 @@ export default function HomePage() {
                       variant="outline"
                       className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 shadow-lg hover:shadow-xl transition-all duration-300 w-full"
                     >
-                      More information
+                      {t("actions.moreInfo")}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -300,7 +326,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Our services
+                {t("badges.ourServices")}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Specialized and personalized treatment
@@ -406,7 +432,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
-                Testimonials
+                {t("badges.testimonials")}
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Stories of recovery and hope
@@ -458,7 +484,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Carmen G.</p>
-                      <p className="text-sm text-gray-600">Patient’s family member</p>
+                      <p className="text-sm text-gray-600">Patient's family member</p>
                     </div>
                   </div>
                 </CardContent>
@@ -496,22 +522,19 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to take the first step?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("cta.ready")}</h2>
               <p className="text-xl mb-8 opacity-90">
-                If you feel you have hit rock bottom and that the time has come to make the decision to pause to
-                regain your life and free yourself from the terrible dependence on alcohol and other drugs; if you can no longer bear
-                to see your family and friends suffer as a consequence of your uncontrollable use; then, count on
-                us.
+                {t("cta.text")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="secondary"
                     className="w-full sm:w-auto bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
                     <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
-                    Contact via WhatsApp
+                    {t("actions.contactWhatsApp")}
                   </Button>
                 </a>
                 <Link href="/en/contacto">
@@ -520,7 +543,7 @@ export default function HomePage() {
                     variant="outline"
                     className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
-                    More information
+                    {t("actions.moreInfo")}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -528,15 +551,15 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm opacity-90">
                 <div className="flex items-center justify-center gap-2">
                   <Shield className="h-4 w-4" />
-                  <span>100% Confidential</span>
+                  <span>{t("features.confidential")}</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Heart className="h-4 w-4" />
-                  <span>Personalized care</span>
+                  <span>{t("features.personalizedAttention")}</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <WhatsAppIcon className="h-4 w-4" color="#10b981" />
-                  <span>Available 24/7</span>
+                  <span>{t("features.available247")}</span>
                 </div>
               </div>
             </div>

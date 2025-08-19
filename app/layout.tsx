@@ -5,7 +5,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { LanguageSwitcher } from "@/components/language-switcher"
 
 import { Analytics } from "@vercel/analytics/next"
 import { locales, defaultLocale, type Locale } from "./i18n"
@@ -74,7 +73,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <I18nProvider lng={lng}>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-            {/* Removed floating LanguageSwitcher to avoid altering visual layout */}
             <Header />
             <main>{children}</main>
             <Footer />
