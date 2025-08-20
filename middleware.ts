@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 const locales = ["es", "en"] as const;
-const defaultLocale = "en";
+const defaultLocale = "es";
 
 function getLocale(request: NextRequest): string {
   // Basic detection via Accept-Language; defaults to 'en'
@@ -33,7 +33,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Redirect to default or detected locale maintaining path
-  // Force default to 'en' unless Accept-Language explicitly matches a supported locale
+  // Force default to 'es' unless Accept-Language explicitly matches a supported locale
   const detected = getLocale(request);
   const locale = locales.includes(detected as any) ? detected : defaultLocale;
 
