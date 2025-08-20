@@ -131,11 +131,11 @@ export function Footer() {
                 }
               </p>
               <div className="flex items-center gap-4">
-                <Link href={isEn ? "/en/terms" : "/terminos"} className="text-gray-400 hover:text-white text-sm underline underline-offset-4">
+                <Link href={isEn ? "/en/terminos" : "/es/terminos"} className="text-gray-400 hover:text-white text-sm underline underline-offset-4">
                   {isEn ? "Terms and conditions" : "Términos y condiciones"}
                 </Link>
                 <span className="text-gray-400">|</span>
-                <Link href={isEn ? "/en/privacy" : "/privacidad"} className="text-gray-400 hover:text-white text-sm underline underline-offset-4">
+                <Link href={isEn ? "/en/privacidad" : "/es/privacidad"} className="text-gray-400 hover:text-white text-sm underline underline-offset-4">
                   {isEn ? "Privacy policy" : "Política de privacidad"}
                 </Link>
               </div>
