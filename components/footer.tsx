@@ -51,22 +51,22 @@ export function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href={isEn ? "/en/treatment" : "/tratamiento"} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={isEn ? "/en/tratamiento" : "/es/tratamiento"} className="text-gray-300 hover:text-white transition-colors">
                   {isEn ? "Treatment" : "Tratamiento"}
                 </Link>
               </li>
               <li>
-                <Link href={isEn ? "/en/facilities" : "/instalaciones"} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={isEn ? "/en/instalaciones" : "/es/instalaciones"} className="text-gray-300 hover:text-white transition-colors">
                   {isEn ? "Facilities" : "Instalaciones"}
                 </Link>
               </li>
               <li>
-                <Link href={isEn ? "/en/team" : "/equipo"} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={isEn ? "/en/equipo" : "/es/equipo"} className="text-gray-300 hover:text-white transition-colors">
                   {isEn ? "Our team" : "Nuestro equipo"}
                 </Link>
               </li>
               <li>
-                <Link href={isEn ? "/en/news" : "/noticias"} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={isEn ? "/en/noticias" : "/es/noticias"} className="text-gray-300 hover:text-white transition-colors">
                   {isEn ? "News" : "Noticias"}
                 </Link>
               </li>
