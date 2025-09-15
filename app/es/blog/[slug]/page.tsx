@@ -7,6 +7,7 @@ import { Calendar, ArrowLeft, Share2, BookOpen, Heart, Brain } from "lucide-reac
 import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
+import { markdownToHtml } from "@/lib/markdown"
 
 type Post = {
   title: string;
@@ -15,12 +16,16 @@ type Post = {
   slug: string;
   image?: string;
   content?: string;
-};
+}
+
+type PostWithHtml = Post & {
+  htmlContent: string;
+}
 
 export default function BlogPostPage() {
   const params = useParams()
   const slug = params.slug as string
-  const [post, setPost] = useState<Post | null>(null)
+  const [post, setPost] = useState<PostWithHtml | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -29,7 +34,12 @@ export default function BlogPostPage() {
         const response = await fetch(`/api/posts/${slug}?lang=es`)
         if (response.ok) {
           const data = await response.json()
-          setPost(data)
+          if (data.content) {
+            const htmlContent = await markdownToHtml(data.content)
+            setPost({ ...data, htmlContent })
+          } else {
+            setPost({ ...data, htmlContent: '' })
+          }
         } else {
           setPost(null)
         }
@@ -140,23 +150,8 @@ export default function BlogPostPage() {
                 <p className="text-gray-700">{post.description}</p>
               </div>
               
-              <div className="text-center py-8">
-                <p className="text-gray-600">
-                  Este artículo está disponible en nuestra versión completa. Para leer el contenido completo, 
-                  contáctanos para obtener acceso a nuestros recursos especializados.
-                </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/es/contacto">
-                    <Button className="bg-emerald-600 hover:bg-emerald-700">
-                      Solicitar acceso completo
-                    </Button>
-                  </Link>
-                  <Link href="/es/noticias">
-                    <Button variant="outline">
-                      Ver más artículos
-                    </Button>
-                  </Link>
-                </div>
+              <div className="prose prose-lg max-w-none">
+                <div dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }} />
               </div>
             </div>
           </div>

@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Star,
   Shield,
+  FileText,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -67,6 +68,7 @@ const equipoData = {
       certificaciones: [],
       descripcion: "",
       especialidades: [],
+      curriculum: "Experto en gestión administrativa y operativa con amplia experiencia en el sector salud. Especializado en optimización de procesos y coordinación de equipos multidisciplinarios.",
     },
     {
       id: 4,
@@ -79,30 +81,43 @@ const equipoData = {
       certificaciones: [],
       descripcion: "",
       especialidades: [],
+      curriculum: "Director ejecutivo con trayectoria sólida en liderazgo organizacional y desarrollo estratégico. Experto en gestión de recursos humanos y planificación institucional.",
     },
     {
       id: 5,
       nombre: "Alejandra Reyna",
       cargo: "Planificación estratégica",
-      especialidad: "Planificación Estratégica",
+      especialidad: "Planificación estratégica",
       imagen: "/images/Alejandra-Reyna-.png",
       experiencia: "",
       educacion: [],
       certificaciones: [],
       descripcion: "",
       especialidades: [],
+      curriculum: "Especialista en planificación estratégica y desarrollo organizacional. Experta en análisis de mercado, formulación de políticas y gestión de proyectos de salud.",
     },
   ],
   medicos: [
     {
       id: 3,
+      nombre: "Dr. Eduardo Landaeta",
+      cargo: "Psiquiatra de la institución",
+      especialidad: "Psiquiatría",
+      imagen: "/images/eduardo-landaeta.png",
+      experiencia: "10+ años",
+      educacion: ["MD - Universidad Central de Venezuela", "Especialización en Psiquiatría"],
+      certificaciones: ["Certificado en Psiquiatría", "Especialista en Trastornos Adictivos"],
+      descripcion:
+        "El Dr. Landaeta es psiquiatra especializado en el tratamiento de trastornos mentales asociados con adicciones. Su enfoque integral combina terapia farmacológica con intervenciones psicosociales para una recuperación completa.",
+      especialidades: ["Evaluación psiquiátrica", "Tratamiento farmacológico", "Trastornos duales", "Terapia de grupo"],
+    },
+    {
+      id: 4,
       nombre: "Dra. Omaira Fehr",
       cargo: "Médico internista",
       especialidad: "Medicina Interna",
       imagen: "/images/omaira-fehr.jpg",
-      experiencia: "12+ años",
-      educacion: ["MD - Universidad Central de Venezuela", "Especialización en Medicina Interna"],
-      certificaciones: ["Certificada en Medicina Interna", "Certificación en Medicina de Adicciones"],
+      experiencia: "5+ años",
       descripcion:
         "La Dra. Fehr se especializa en el manejo médico de pacientes con trastornos adictivos. Su experiencia en medicina interna asegura una atención integral para pacientes con condiciones médicas complejas.",
       especialidades: ["Evaluación médica", "Protocolos de desintoxicación", "Manejo de enfermedades crónicas"],
@@ -111,29 +126,25 @@ const equipoData = {
   terapeutas: [
     {
       id: 4,
-      nombre: "Pau Saman",
-      cargo: "Psicóloga Clínica",
-      especialidad: "Psicología Clínica",
-      imagen: "/images/Pau-Saman-Equipo terapeutico.png",
-      experiencia: "8+ años",
-      educacion: ["Licenciatura en Psicología", "Maestría en Psicología Clínica"],
-      certificaciones: ["Terapia Cognitivo-Conductual", "Terapia de Trauma"],
-      descripcion:
-        "Pau se especializa en terapia de trauma y enfoques cognitivo-conductuales. Su trabajo se centra en ayudar a los pacientes a desarrollar mecanismos de afrontamiento saludables y habilidades de regulación emocional.",
-      especialidades: ["Terapia de trauma", "TCC", "Regulación emocional"],
-    },
-    {
-      id: 5,
       nombre: "Alejandro Marquez",
       cargo: "Terapeuta Familiar",
       especialidad: "Terapia Familiar",
       imagen: "/images/Alejandro-Marquez-Equipo terapeutico.png",
-      experiencia: "10+ años",
-      educacion: ["Licenciatura en Psicología", "Especialización en Terapia Familiar"],
-      certificaciones: ["Terapia Familiar Sistémica", "Terapia de Parejas"],
+      experiencia: "11+ años",
       descripcion:
         "Alejandro se enfoca en la dinámica familiar y la terapia sistémica. Trabaja con familias para reconstruir relaciones y crear entornos de apoyo para la recuperación.",
       especialidades: ["Terapia familiar", "Terapia sistémica", "Terapia de parejas"],
+    },
+    {
+      id: 5,
+      nombre: "Pau Saman",
+      cargo: "Psicóloga Clínica",
+      especialidad: "Psicología Clínica",
+      imagen: "/images/Pau-Saman-Equipo terapeutico.png",
+      experiencia: "7+ años",
+      descripcion:
+        "Pau se especializa en terapia de trauma y enfoques cognitivo-conductuales. Su trabajo se centra en ayudar a los pacientes a desarrollar mecanismos de afrontamiento saludables y habilidades de regulación emocional.",
+      especialidades: ["Terapia de trauma", "TCC", "Regulación emocional"],
     },
   ],
   apoyo: [
@@ -144,8 +155,6 @@ const equipoData = {
       especialidad: "Enfermería",
       imagen: "/images/karina-urbina.png",
       experiencia: "15+ años",
-      educacion: ["Licenciatura en Enfermería", "Especialización en Salud Mental"],
-      certificaciones: ["Enfermería en Salud Mental", "Enfermería en Adicciones"],
       descripcion:
         "Karina coordina el equipo de enfermería y asegura la atención de alta calidad para los pacientes. Su experiencia en enfermería de salud mental es crucial para la seguridad y comodidad del paciente.",
       especialidades: ["Atención al paciente", "Manejo de medicamentos", "Intervención en crisis"],
@@ -247,7 +256,8 @@ export default function EquipoPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={miembro.imagen}
-                              alt={miembro.nombre}
+                              alt={`${miembro.nombre}, ${miembro.cargo} en Vistacampo centro de rehabilitación`}
+                              title={`${miembro.nombre} - ${miembro.especialidad}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -264,37 +274,8 @@ export default function EquipoPage() {
                         {miembro.descripcion && (
                           <p className="text-gray-700 text-sm leading-relaxed mb-4">{miembro.descripcion}</p>
                         )}
-                        {miembro.educacion.length > 0 && (
-                          <div className="mb-4">
-                            <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                              <GraduationCap className="h-4 w-4 mr-2" />
-                              Educación
-                            </h4>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {miembro.educacion.map((item, index) => (
-                                <li key={index} className="flex items-start">
-                                  <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                  {item}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                        {miembro.certificaciones.length > 0 && (
-                          <div className="mb-4">
-                            <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                              <Award className="h-4 w-4 mr-2" />
-                              Certificaciones
-                            </h4>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {miembro.certificaciones.map((item, index) => (
-                                <li key={index} className="flex items-start">
-                                  <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                  {item}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                        {miembro.curriculum && (
+                          <p className="text-gray-700 text-sm leading-relaxed mb-4">{miembro.curriculum}</p>
                         )}
                         {miembro.especialidades.length > 0 && (
                           <div>
@@ -323,7 +304,8 @@ export default function EquipoPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={miembro.imagen}
-                              alt={miembro.nombre}
+                              alt={`${miembro.nombre}, ${miembro.cargo} en Vistacampo centro de rehabilitación`}
+                              title={`${miembro.nombre} - ${miembro.especialidad}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -336,34 +318,6 @@ export default function EquipoPage() {
                           </Badge>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed mb-4">{miembro.descripcion}</p>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <GraduationCap className="h-4 w-4 mr-2" />
-                            Educación
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {miembro.educacion.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <Award className="h-4 w-4 mr-2" />
-                            Certificaciones
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {miembro.certificaciones.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-2">Especialidades</h4>
                           <div className="flex flex-wrap gap-2">
@@ -389,7 +343,8 @@ export default function EquipoPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={miembro.imagen}
-                              alt={miembro.nombre}
+                              alt={`${miembro.nombre}, ${miembro.cargo} en Vistacampo centro de rehabilitación`}
+                              title={`${miembro.nombre} - ${miembro.especialidad}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -402,34 +357,6 @@ export default function EquipoPage() {
                           </Badge>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed mb-4">{miembro.descripcion}</p>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <GraduationCap className="h-4 w-4 mr-2" />
-                            Educación
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {miembro.educacion.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <Award className="h-4 w-4 mr-2" />
-                            Certificaciones
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {miembro.certificaciones.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-2">Especialidades</h4>
                           <div className="flex flex-wrap gap-2">
@@ -455,7 +382,8 @@ export default function EquipoPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={miembro.imagen}
-                              alt={miembro.nombre}
+                              alt={`${miembro.nombre}, ${miembro.cargo} en Vistacampo centro de rehabilitación`}
+                              title={`${miembro.nombre} - ${miembro.especialidad}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -468,34 +396,6 @@ export default function EquipoPage() {
                           </Badge>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed mb-4">{miembro.descripcion}</p>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <GraduationCap className="h-4 w-4 mr-2" />
-                            Educación
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {miembro.educacion.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <Award className="h-4 w-4 mr-2" />
-                            Certificaciones
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {miembro.certificaciones.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-2">Especialidades</h4>
                           <div className="flex flex-wrap gap-2">

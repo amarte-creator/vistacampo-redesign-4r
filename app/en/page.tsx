@@ -457,10 +457,10 @@ export default function HomePage() {
                   </p>
                   <div className="flex items-center">
                     <div className="bg-emerald-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-emerald-600 font-semibold">M.R.</span>
+                      <span className="text-emerald-600 font-semibold">S.M.</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">María R.</p>
+                      <p className="font-semibold text-gray-900">Salma Maaz</p>
                       <p className="text-sm text-gray-600">Recovered patient</p>
                     </div>
                   </div>
@@ -480,10 +480,10 @@ export default function HomePage() {
                   </p>
                   <div className="flex items-center">
                     <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-blue-600 font-semibold">C.G.</span>
+                      <span className="text-blue-600 font-semibold">H.G.</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">Carmen G.</p>
+                      <p className="font-semibold text-gray-900">Henry Galviz</p>
                       <p className="text-sm text-gray-600">Patient's family member</p>
                     </div>
                   </div>
@@ -503,10 +503,10 @@ export default function HomePage() {
                   </p>
                   <div className="flex items-center">
                     <div className="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-purple-600 font-semibold">J.L.</span>
+                      <span className="text-purple-600 font-semibold">O.M.</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">José L.</p>
+                      <p className="font-semibold text-gray-900">Oscar Martin</p>
                       <p className="text-sm text-gray-600">Recovered patient</p>
                     </div>
                   </div>
@@ -550,11 +550,11 @@ export default function HomePage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm opacity-90">
                 <div className="flex items-center justify-center gap-2">
-                  <Shield className="h-4 w-4" />
+                  <Shield className="h-4 w-4 text-emerald-600" />
                   <span>{t("features.confidential")}</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <Heart className="h-4 w-4" />
+                  <Heart className="h-4 w-4 text-emerald-600" />
                   <span>{t("features.personalizedAttention")}</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">

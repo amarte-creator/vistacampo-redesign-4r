@@ -58,7 +58,7 @@ export default function TreatmentClient({ lng }: Props) {
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               {t("treatment.hero.subtitle")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center items-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
@@ -68,16 +68,6 @@ export default function TreatmentClient({ lng }: Props) {
                   {t("treatment.hero.contact")}
                 </Button>
               </a>
-              <Link href={`/${lng}/admision`}>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  {t("actions.moreInfo")}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
@@ -126,6 +116,7 @@ export default function TreatmentClient({ lng }: Props) {
                 <Image
                   src="/images/vc-terapia-2.jpeg"
                   alt={t("treatment.approach.imageAlt")}
+                  title="Terapia médica y psicológica en Vistacampo"
                   width={600}
                   height={500}
                   className="rounded-2xl shadow-2xl"
@@ -258,6 +249,7 @@ export default function TreatmentClient({ lng }: Props) {
                   <Image
                     src="/images/vc-comida.jpeg"
                     alt={t("treatment.phases.items.0.imageAlt")}
+                    title="Comida saludable en Vistacampo centro de rehabilitación"
                     width={500}
                     height={400}
                     className="rounded-2xl shadow-2xl"
@@ -271,6 +263,7 @@ export default function TreatmentClient({ lng }: Props) {
                   <Image
                     src="/images/vc-desayuno.jpeg"
                     alt={t("treatment.phases.items.1.imageAlt")}
+                    title="Desayuno nutritivo en Vistacampo centro de rehabilitación"
                     width={500}
                     height={400}
                     className="rounded-2xl shadow-2xl"
@@ -342,8 +335,9 @@ export default function TreatmentClient({ lng }: Props) {
                 </div>
                 <div className="relative">
                   <Image
-                    src="/images/vc-florero.jpeg"
+                    src="/images/rehabilitacionVC.jpeg"
                     alt={t("treatment.phases.items.2.imageAlt")}
+                    title="Sesión de rehabilitación y terapia en Vistacampo"
                     width={500}
                     height={400}
                     className="rounded-2xl shadow-2xl"
@@ -355,8 +349,9 @@ export default function TreatmentClient({ lng }: Props) {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="relative lg:order-2">
                   <Image
-                    src="/images/vc-sala-cala.jpeg"
+                    src="/images/reinsercionVC.jpeg"
                     alt={t("treatment.phases.items.3.imageAlt")}
+                    title="Reinserción social y actividades al aire libre en Vistacampo"
                     width={500}
                     height={400}
                     className="rounded-2xl shadow-2xl"
@@ -527,7 +522,7 @@ export default function TreatmentClient({ lng }: Props) {
             </div>
 
             <Accordion type="single" collapsible className="space-y-4">
-              {[0, 1, 2, 3, 4, 5].map((i) => (
+              {[0, 1, 2, 3, 4].map((i) => (
                 <AccordionItem key={i} value={`item-${i+1}`} className="border rounded-lg px-6">
                   <AccordionTrigger className="text-left font-semibold">
                     {t(`treatment.faq.items.${i}.q`)}
@@ -552,21 +547,13 @@ export default function TreatmentClient({ lng }: Props) {
             <p className="text-xl mb-8 opacity-90">
               {t("treatment.cta.text")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
+                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
                   {t("treatment.cta.contact")}
                 </Button>
               </a>
-              <Link href={`/${lng}/admision`}>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white text-emerald-600 hover:bg-gray-100">
-                  {t("treatment.cta.admission")}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
             </div>
           </div>
         </div>

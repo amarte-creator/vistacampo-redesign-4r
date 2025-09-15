@@ -83,15 +83,15 @@ const facilitiesData = {
     },
     {
       id: 5,
-      title: "Library and study room",
+      title: "Library and living room",
       description: "Quiet environment for reading, reflection and educational activities.",
       image: "/images/vc-sala-cala.jpeg",
       features: [
         "Specialized collection",
         "Study tables",
-        "WiFi connection",
+        "Smart TV",
         "Reading area",
-        "Guaranteed silence",
+        "Guaranteed comfort",
       ],
     },
     {
@@ -126,7 +126,7 @@ const facilitiesData = {
       id: 8,
       title: "Sports and recreation area",
       description: "Spaces for physical activity and healthy recreation.",
-      image: "/images/vc-instalaciones.jpeg",
+      image: "/images/areaDeportivaVC.jpeg",
       features: [
         "Exercise equipment",
         "Sports courts",
@@ -215,7 +215,8 @@ export default function FacilitiesPage() {
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
                             src={room.image}
-                            alt={room.title}
+                            alt={`${room.title} at Vistacampo rehabilitation center - ${room.description}`}
+                            title={`${room.title} - Vistacampo Facilities`}
                             width={400}
                             height={300}
                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -235,7 +236,8 @@ export default function FacilitiesPage() {
                               <DialogTitle>{room.title}</DialogTitle>
                               <Image
                                 src={room.image}
-                                alt={room.title}
+                                alt={`${room.title} at Vistacampo rehabilitation center - ${room.description}`}
+                                title={`${room.title} - Vistacampo Facilities`}
                                 width={800}
                                 height={600}
                                 className="w-full h-auto rounded-lg"
@@ -271,7 +273,8 @@ export default function FacilitiesPage() {
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
                             src={area.image}
-                            alt={area.title}
+                            alt={`${area.title} at Vistacampo rehabilitation center - ${area.description}`}
+                            title={`${area.title} - Vistacampo Facilities`}
                             width={400}
                             height={300}
                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -291,7 +294,8 @@ export default function FacilitiesPage() {
                               <DialogTitle>{area.title}</DialogTitle>
                               <Image
                                 src={area.image}
-                                alt={area.title}
+                                alt={`${area.title} at Vistacampo rehabilitation center - ${area.description}`}
+                                title={`${area.title} - Vistacampo Facilities`}
                                 width={800}
                                 height={600}
                                 className="w-full h-auto rounded-lg"
@@ -327,7 +331,8 @@ export default function FacilitiesPage() {
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
                             src={area.image}
-                            alt={area.title}
+                            alt={`${area.title} at Vistacampo rehabilitation center - ${area.description}`}
+                            title={`${area.title} - Vistacampo Facilities`}
                             width={400}
                             height={300}
                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -347,7 +352,8 @@ export default function FacilitiesPage() {
                               <DialogTitle>{area.title}</DialogTitle>
                               <Image
                                 src={area.image}
-                                alt={area.title}
+                                alt={`${area.title} at Vistacampo rehabilitation center - ${area.description}`}
+                                title={`${area.title} - Vistacampo Facilities`}
                                 width={800}
                                 height={600}
                                 className="w-full h-auto rounded-lg"

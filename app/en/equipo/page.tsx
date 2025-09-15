@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Star,
   Shield,
+  FileText,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -30,7 +31,7 @@ const teamData = {
     {
       id: 1,
       name: "Julio González",
-      position: "Founder and Director Vistacampo",
+      position: "Founder and director Vistacampo",
       specialty: "Addictions",
       image: "/images/Julio-Gonzales-Fundador y Director Vistacampo.jpg",
       experience: "20+ years",
@@ -43,8 +44,8 @@ const teamData = {
     {
       id: 2,
       name: "Dr. María Alvarez",
-      position: "Scientific Committee Member",
-      specialty: "Clinical Psychology",
+      position: "Scientific committee member",
+      specialty: "Clinical psychology",
       image: "/images/Maria-Alvares.jpg",
       experience: "15+ years",
       education: [
@@ -67,6 +68,7 @@ const teamData = {
       certifications: [],
       description: "",
       specialties: [],
+      resume: "Expert in administrative and operational management with extensive experience in the health sector. Specialized in process optimization and coordination of multidisciplinary teams.",
     },
     {
       id: 4,
@@ -79,6 +81,7 @@ const teamData = {
       certifications: [],
       description: "",
       specialties: [],
+      resume: "Executive director with solid track record in organizational leadership and strategic development. Expert in human resource management and institutional planning.",
     },
     {
       id: 5,
@@ -91,18 +94,30 @@ const teamData = {
       certifications: [],
       description: "",
       specialties: [],
+      resume: "Specialist in strategic planning and organizational development. Expert in market analysis, policy formulation and health project management.",
     },
   ],
   doctors: [
     {
       id: 3,
+      name: "Dr. Eduardo Landaeta",
+      position: "Institution Psychiatrist",
+      specialty: "Psychiatry",
+      image: "/images/eduardo-landaeta.png",
+      experience: "10+ years",
+      education: ["MD - Universidad Central de Venezuela", "Specialization in Psychiatry"],
+      certifications: ["Board Certified in Psychiatry", "Addiction Disorders Specialist"],
+      description:
+        "Dr. Landaeta is a psychiatrist specialized in treating mental disorders associated with addictions. His comprehensive approach combines pharmacological therapy with psychosocial interventions for complete recovery.",
+      specialties: ["Psychiatric evaluation", "Pharmacological treatment", "Dual disorders", "Group therapy"],
+    },
+    {
+      id: 4,
       name: "Dr. Omaira Fehr",
       position: "Internal Medicine Physician",
       specialty: "Internal Medicine",
       image: "/images/omaira-fehr.jpg",
-      experience: "12+ years",
-      education: ["MD - Universidad Central de Venezuela", "Specialization in Internal Medicine"],
-      certifications: ["Board Certified in Internal Medicine", "Addiction Medicine Certification"],
+      experience: "5+ years",
       description:
         "Dr. Fehr specializes in the medical management of patients with addiction disorders. Her expertise in internal medicine ensures comprehensive care for patients with complex medical conditions.",
       specialties: ["Medical evaluation", "Detoxification protocols", "Chronic disease management"],
@@ -111,29 +126,25 @@ const teamData = {
   therapists: [
     {
       id: 4,
-      name: "Pau Saman",
-      position: "Clinical Psychologist",
-      specialty: "Clinical Psychology",
-      image: "/images/Pau-Saman-Equipo terapeutico.png",
-      experience: "8+ years",
-      education: ["Bachelor's in Psychology", "Master's in Clinical Psychology"],
-      certifications: ["Cognitive-Behavioral Therapy", "Trauma Therapy"],
-      description:
-        "Pau specializes in trauma therapy and cognitive-behavioral approaches. Her work focuses on helping patients develop healthy coping mechanisms and emotional regulation skills.",
-      specialties: ["Trauma therapy", "CBT", "Emotional regulation"],
-    },
-    {
-      id: 5,
       name: "Alejandro Marquez",
       position: "Family Therapist",
       specialty: "Family Therapy",
       image: "/images/Alejandro-Marquez-Equipo terapeutico.png",
-      experience: "10+ years",
-      education: ["Bachelor's in Psychology", "Specialization in Family Therapy"],
-      certifications: ["Systemic Family Therapy", "Couples Therapy"],
+      experience: "11+ years of recovery",
       description:
         "Alejandro focuses on family dynamics and systemic therapy. He works with families to rebuild relationships and create supportive environments for recovery.",
       specialties: ["Family therapy", "Systemic therapy", "Couples therapy"],
+    },
+    {
+      id: 5,
+      name: "Pau Saman",
+      position: "Clinical Psychologist",
+      specialty: "Clinical Psychology",
+      image: "/images/Pau-Saman-Equipo terapeutico.png",
+      experience: "7+ years",
+      description:
+        "Pau specializes in trauma therapy and cognitive-behavioral approaches. Her work focuses on helping patients develop healthy coping mechanisms and emotional regulation skills.",
+      specialties: ["Trauma therapy", "CBT", "Emotional regulation"],
     },
   ],
   support: [
@@ -144,8 +155,6 @@ const teamData = {
       specialty: "Nursing",
       image: "/images/karina-urbina.png",
       experience: "15+ years",
-      education: ["Nursing Degree", "Specialization in Mental Health"],
-      certifications: ["Mental Health Nursing", "Addiction Nursing"],
       description:
         "Karina coordinates the nursing team and ensures high-quality patient care. Her experience in mental health nursing is crucial for patient safety and comfort.",
       specialties: ["Patient care", "Medication management", "Crisis intervention"],
@@ -247,7 +256,8 @@ export default function TeamPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={member.image}
-                              alt={member.name}
+                              alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
+                              title={`${member.name} - ${member.specialty}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -264,37 +274,8 @@ export default function TeamPage() {
                         {member.description && (
                           <p className="text-gray-700 text-sm leading-relaxed mb-4">{member.description}</p>
                         )}
-                        {member.education.length > 0 && (
-                          <div className="mb-4">
-                            <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                              <GraduationCap className="h-4 w-4 mr-2" />
-                              Education
-                            </h4>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {member.education.map((item, index) => (
-                                <li key={index} className="flex items-start">
-                                  <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                  {item}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                        {member.certifications.length > 0 && (
-                          <div className="mb-4">
-                            <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                              <Award className="h-4 w-4 mr-2" />
-                              Certifications
-                            </h4>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {member.certifications.map((item, index) => (
-                                <li key={index} className="flex items-start">
-                                  <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                  {item}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                        {member.resume && (
+                          <p className="text-gray-700 text-sm leading-relaxed mb-4">{member.resume}</p>
                         )}
                         {member.specialties.length > 0 && (
                           <div>
@@ -323,7 +304,8 @@ export default function TeamPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={member.image}
-                              alt={member.name}
+                              alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
+                              title={`${member.name} - ${member.specialty}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -336,34 +318,6 @@ export default function TeamPage() {
                           </Badge>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed mb-4">{member.description}</p>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <GraduationCap className="h-4 w-4 mr-2" />
-                            Education
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {member.education.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <Award className="h-4 w-4 mr-2" />
-                            Certifications
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {member.certifications.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-2">Specialties</h4>
                           <div className="flex flex-wrap gap-2">
@@ -389,7 +343,8 @@ export default function TeamPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={member.image}
-                              alt={member.name}
+                              alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
+                              title={`${member.name} - ${member.specialty}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -402,34 +357,6 @@ export default function TeamPage() {
                           </Badge>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed mb-4">{member.description}</p>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <GraduationCap className="h-4 w-4 mr-2" />
-                            Education
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {member.education.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <Award className="h-4 w-4 mr-2" />
-                            Certifications
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {member.certifications.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-2">Specialties</h4>
                           <div className="flex flex-wrap gap-2">
@@ -455,7 +382,8 @@ export default function TeamPage() {
                           <div className="relative w-32 h-32 mx-auto mb-4">
                             <Image
                               src={member.image}
-                              alt={member.name}
+                              alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
+                              title={`${member.name} - ${member.specialty}`}
                               fill
                               className="rounded-full object-cover"
                             />
@@ -468,34 +396,6 @@ export default function TeamPage() {
                           </Badge>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed mb-4">{member.description}</p>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <GraduationCap className="h-4 w-4 mr-2" />
-                            Education
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {member.education.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Star className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <Award className="h-4 w-4 mr-2" />
-                            Certifications
-                          </h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {member.certifications.map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <Shield className="h-3 w-3 text-emerald-600 mt-1 mr-2 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-2">Specialties</h4>
                           <div className="flex flex-wrap gap-2">

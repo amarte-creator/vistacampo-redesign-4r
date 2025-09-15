@@ -35,6 +35,11 @@ export async function GET(
     const source = fs.readFileSync(path.join(postsDirectory, postFile), 'utf8')
     const { data, content } = matter(source)
 
+    // Check if post is a draft
+    if (data.draft === true) {
+      return NextResponse.json({ error: 'Post not found' }, { status: 404 })
+    }
+
     const post = {
       title: data.title,
       description: data.description,

@@ -41,8 +41,10 @@ export async function GET(request: NextRequest) {
           date: data.date,
           slug: data.slug,
           image: data.image,
+          draft: data.draft || false,
         }
       })
+      .filter((post) => !post.draft) // Filter out draft posts
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
     return NextResponse.json(posts)

@@ -82,15 +82,15 @@ const instalacionesData = {
     },
     {
       id: 5,
-      titulo: "Biblioteca y sala de estudio",
+      titulo: "Biblioteca y sala de estar",
       descripcion: "Ambiente tranquilo para la lectura, reflexión y actividades educativas.",
       imagen: "/images/vc-sala-cala.jpeg",
       caracteristicas: [
         "Colección especializada",
         "Mesas de estudio",
-        "Conexión WiFi",
+        "Smart TV",
         "Zona de lectura",
-        "Silencio garantizado",
+        "Comfort garantizado",
       ],
     },
     {
@@ -125,7 +125,7 @@ const instalacionesData = {
       id: 8,
       titulo: "Área deportiva y recreativa",
       descripcion: "Espacios para la actividad física y recreación saludable.",
-      imagen: "/images/vc-instalaciones.jpeg",
+      imagen: "/images/areaDeportivaVC.jpeg",
       caracteristicas: [
         "Equipos de ejercicio",
         "Canchas deportivas",
@@ -213,7 +213,8 @@ export default function InstalacionesPage() {
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
                             src={habitacion.imagen}
-                            alt={habitacion.titulo}
+                            alt={`${habitacion.titulo} en Vistacampo centro de rehabilitación - ${habitacion.descripcion}`}
+                            title={`${habitacion.titulo} - Instalaciones Vistacampo`}
                             width={400}
                             height={300}
                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -233,7 +234,8 @@ export default function InstalacionesPage() {
                               <DialogTitle>{habitacion.titulo}</DialogTitle>
                               <Image
                                 src={habitacion.imagen}
-                                alt={habitacion.titulo}
+                                alt={`${habitacion.titulo} en Vistacampo centro de rehabilitación - ${habitacion.descripcion}`}
+                                title={`${habitacion.titulo} - Instalaciones Vistacampo`}
                                 width={800}
                                 height={600}
                                 className="w-full h-auto rounded-lg"
@@ -325,7 +327,8 @@ export default function InstalacionesPage() {
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
                             src={area.imagen}
-                            alt={area.titulo}
+                            alt={`${area.titulo} en Vistacampo centro de rehabilitación - ${area.descripcion}`}
+                            title={`${area.titulo} - Instalaciones Vistacampo`}
                             width={400}
                             height={300}
                             className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
@@ -345,7 +348,8 @@ export default function InstalacionesPage() {
                               <DialogTitle>{area.titulo}</DialogTitle>
                               <Image
                                 src={area.imagen}
-                                alt={area.titulo}
+                                alt={`${area.titulo} en Vistacampo centro de rehabilitación - ${area.descripcion}`}
+                                title={`${area.titulo} - Instalaciones Vistacampo`}
                                 width={800}
                                 height={600}
                                 className="w-full h-auto rounded-lg"
