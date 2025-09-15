@@ -15,6 +15,7 @@ type Post = {
   date: string;
   slug: string;
   image?: string;
+  imageAttribution?: string;
   content?: string;
 }
 
@@ -127,13 +128,20 @@ export default function BlogPostPage() {
             </div>
 
             {post.image && (
-              <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden mb-8">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                />
+              <div className="mb-8">
+                <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {post.imageAttribution && (
+                  <p className="text-sm text-gray-500 mt-2 text-center">
+                    {post.imageAttribution}
+                  </p>
+                )}
               </div>
             )}
           </div>
