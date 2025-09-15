@@ -4,6 +4,17 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Share2, Copy, Check, Facebook, Twitter, Linkedin, MessageCircle } from "lucide-react"
 
+// Type declaration for navigator.share API
+declare global {
+  interface Navigator {
+    share?: (data: {
+      title?: string
+      text?: string
+      url?: string
+    }) => Promise<void>
+  }
+}
+
 interface ShareButtonsProps {
   title: string
   url: string
@@ -25,32 +36,64 @@ export function ShareButtons({ title, url, description, language }: ShareButtons
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch (err) {
-      console.error('Failed to copy: ', err)
+      // Fallback for older browsers or when clipboard API fails
+      try {
+        const textArea = document.createElement('textarea')
+        textArea.value = url
+        textArea.style.position = 'fixed'
+        textArea.style.left = '-999999px'
+        textArea.style.top = '-999999px'
+        document.body.appendChild(textArea)
+        textArea.focus()
+        textArea.select()
+        document.execCommand('copy')
+        document.body.removeChild(textArea)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      } catch (fallbackErr) {
+        console.error('Failed to copy to clipboard:', fallbackErr)
+      }
     }
   }
 
   const shareOnFacebook = () => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`
-    window.open(facebookUrl, '_blank', 'width=600,height=400')
+    try {
+      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`
+      window.open(facebookUrl, '_blank', 'width=600,height=400')
+    } catch (err) {
+      console.error('Error opening Facebook share:', err)
+    }
   }
 
   const shareOnTwitter = () => {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`
-    window.open(twitterUrl, '_blank', 'width=600,height=400')
+    try {
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`
+      window.open(twitterUrl, '_blank', 'width=600,height=400')
+    } catch (err) {
+      console.error('Error opening Twitter share:', err)
+    }
   }
 
   const shareOnLinkedIn = () => {
-    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`
-    window.open(linkedinUrl, '_blank', 'width=600,height=400')
+    try {
+      const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`
+      window.open(linkedinUrl, '_blank', 'width=600,height=400')
+    } catch (err) {
+      console.error('Error opening LinkedIn share:', err)
+    }
   }
 
   const shareOnWhatsApp = () => {
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${url}`)}`
-    window.open(whatsappUrl, '_blank')
+    try {
+      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${url}`)}`
+      window.open(whatsappUrl, '_blank')
+    } catch (err) {
+      console.error('Error opening WhatsApp share:', err)
+    }
   }
 
   const shareViaNative = async () => {
-    if (navigator.share) {
+    if (typeof navigator !== 'undefined' && 'share' in navigator && typeof navigator.share === 'function') {
       try {
         await navigator.share({
           title,
@@ -58,6 +101,12 @@ export function ShareButtons({ title, url, description, language }: ShareButtons
           url
         })
       } catch (err) {
+        // Handle user cancellation gracefully - don't log as error
+        if (err instanceof Error && err.name === 'AbortError') {
+          // User cancelled the share dialog - this is normal behavior
+          return
+        }
+        // Only log actual errors, not user cancellations
         console.error('Error sharing:', err)
       }
     } else {
@@ -127,7 +176,7 @@ export function ShareButtons({ title, url, description, language }: ShareButtons
               </button>
             ))}
             
-            {navigator.share && (
+            {typeof navigator !== 'undefined' && 'share' in navigator && typeof navigator.share === 'function' && (
               <button
                 onClick={() => {
                   shareViaNative()
