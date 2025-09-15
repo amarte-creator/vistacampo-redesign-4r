@@ -3,11 +3,12 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, ArrowLeft, Share2, BookOpen, Heart, Brain } from "lucide-react"
+import { Calendar, ArrowLeft, BookOpen, Heart, Brain } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import { markdownToHtml } from "@/lib/markdown"
+import { ShareButtons } from "@/components/share-buttons"
 
 type Post = {
   title: string;
@@ -120,10 +121,12 @@ export default function BlogPostPage() {
                     day: 'numeric' 
                   })}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Share2 className="h-4 w-4" />
-                  <span>Share</span>
-                </div>
+                <ShareButtons 
+                  title={post.title}
+                  url={typeof window !== 'undefined' ? window.location.href : ''}
+                  description={post.description}
+                  language="en"
+                />
               </div>
             </div>
 
