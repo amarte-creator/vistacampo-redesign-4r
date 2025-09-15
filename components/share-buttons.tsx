@@ -4,15 +4,11 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Share2, Copy, Check, Facebook, Twitter, Linkedin, MessageCircle } from "lucide-react"
 
-// Type declaration for navigator.share API
-declare global {
-  interface Navigator {
-    share?: (data: {
-      title?: string
-      text?: string
-      url?: string
-    }) => Promise<void>
-  }
+// Type assertion for navigator.share API
+interface ShareData {
+  title?: string
+  text?: string
+  url?: string
 }
 
 interface ShareButtonsProps {
@@ -95,7 +91,7 @@ export function ShareButtons({ title, url, description, language }: ShareButtons
   const shareViaNative = async () => {
     if (typeof navigator !== 'undefined' && 'share' in navigator && typeof navigator.share === 'function') {
       try {
-        await navigator.share({
+        await (navigator as any).share({
           title,
           text: description || shareText,
           url
