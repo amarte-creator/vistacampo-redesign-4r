@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -11,31 +11,22 @@ import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
 import { TypingText } from "@/components/TypingText"
 import { useTranslation } from "react-i18next"
-import { initI18next } from "@/app/i18n"
 
-export default function HomePage() {
-  const { t, i18n } = useTranslation("common");
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    const initializeI18n = async () => {
-      await initI18next("es");
-      setIsReady(true);
-    };
-    initializeI18n();
-  }, []);
-
-  // Show loading state while i18n is initializing
-  if (!isReady) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-emerald-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Cargando...</p>
-        </div>
+// Fallback component for loading state
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-emerald-600 mx-auto"></div>
+        <p className="mt-4 text-gray-600">Cargando...</p>
       </div>
-    );
-  }
+    </div>
+  );
+}
+
+// Main content component wrapped in Suspense
+function HomePageContent() {
+  const { t } = useTranslation("common");
 
   return (
     <div className="min-h-screen">
@@ -50,7 +41,7 @@ export default function HomePage() {
             priority
             quality={70}
             placeholder="blur"
-            blurDataURL="/images/vc-panoramica-blur.webp"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
             className="object-cover w-full h-full"
           />
         </div>
@@ -173,6 +164,7 @@ export default function HomePage() {
                   width={600}
                   height={500}
                   className="rounded-2xl shadow-2xl"
+                  loading="lazy"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center gap-4">
@@ -217,6 +209,7 @@ export default function HomePage() {
                     width={600}
                     height={700}
                     className="w-full h-auto object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                     <div className="text-white">
@@ -568,4 +561,13 @@ export default function HomePage() {
       </section>
     </div>
   )
+}
+
+// Main export with Suspense wrapper
+export default function HomePage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <HomePageContent />
+    </Suspense>
+  );
 }

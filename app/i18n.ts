@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next/initReactI18next';
 
 export const locales = ['es', 'en'] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = 'es'; // Changed to Spanish as default
 export const namespaces = ['common'] as const;
 
 let initialized = false;
@@ -18,6 +18,13 @@ export function getOptions(lng: Locale, ns: string[] = [...namespaces]): InitOpt
     defaultNS: 'common',
     interpolation: { escapeValue: false },
     returnNull: false,
+    // Performance optimizations
+    load: 'languageOnly',
+    preload: [defaultLocale],
+    initImmediate: false,
+    react: {
+      useSuspense: false, // Disable suspense to prevent blocking
+    },
   };
 }
 

@@ -4,7 +4,7 @@ const locales = ["es", "en"] as const;
 const defaultLocale = "es";
 
 function getLocale(request: NextRequest): string {
-  // Basic detection via Accept-Language; defaults to 'en'
+  // Basic detection via Accept-Language; defaults to 'es'
   const header = request.headers.get("accept-language") || "";
   const preferred = header.split(",").map(p => p.split(";")[0].trim().toLowerCase());
   for (const p of preferred) {
@@ -21,7 +21,9 @@ export function middleware(request: NextRequest) {
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
-    pathname.includes(".") // file with extension
+    pathname.includes(".") || // file with extension
+    pathname.startsWith("/images") ||
+    pathname.startsWith("/locales")
   ) {
     return;
   }
@@ -39,11 +41,16 @@ export function middleware(request: NextRequest) {
 
   const url = request.nextUrl.clone();
   url.pathname = `/${locale}${pathname}`;
-  return NextResponse.redirect(url);
+  
+  // Add caching headers for redirects
+  const response = NextResponse.redirect(url);
+  response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+  
+  return response;
 }
 
 export const config = {
   matcher: [
-    "/((?!_next|.*\\..*|favicon.ico|robots.txt|sitemap.xml|images|placeholder.*).*)",
+    "/((?!_next|.*\\..*|favicon.ico|robots.txt|sitemap.xml|images|placeholder.*|locales).*)",
   ],
 };
